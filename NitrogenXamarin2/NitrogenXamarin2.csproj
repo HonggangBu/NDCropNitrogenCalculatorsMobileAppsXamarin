@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="ViewModels\ItemDetailViewModel.cs" />
-    <Compile Remove="ViewModels\ItemsViewModel.cs" />
-    <Compile Remove="ViewModels\LoginViewModel.cs" />
-    <Compile Remove="ViewModels\NewItemViewModel.cs" />
     <Compile Remove="Views\ItemDetailPage.xaml.cs" />
     <Compile Remove="Views\ItemsPage.xaml.cs" />
     <Compile Remove="Views\LoginPage.xaml.cs" />
