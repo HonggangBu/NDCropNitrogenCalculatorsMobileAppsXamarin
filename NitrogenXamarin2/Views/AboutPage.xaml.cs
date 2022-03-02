@@ -1,8 +1,6 @@
 ﻿using System;
-using System.ComponentModel;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace NitrogenXamarin2.Views
 {
@@ -13,9 +11,14 @@ namespace NitrogenXamarin2.Views
             InitializeComponent();
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void TapGestureRecognizerPDF_Tapped(object sender, EventArgs e)
         {
-            await Browser.OpenAsync("https://www.tutorialspoint.com/unix/index.htm", BrowserLaunchMode.SystemPreferred);
+            await Browser.OpenAsync("https://extension.soils.wisc.edu/wp-content/uploads/sites/68/2016/07/Sawyer-1.pdf", BrowserLaunchMode.SystemPreferred);
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Browser.OpenAsync("https://www.ndsu.edu/snrs/people/faculty/dave_franzen/", BrowserLaunchMode.SystemPreferred);
         }
     }
 }

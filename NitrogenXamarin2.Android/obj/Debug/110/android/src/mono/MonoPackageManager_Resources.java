@@ -3,6 +3,7 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "NitrogenXamarin2.Android.dll" comes first in this list. */
 		"NitrogenXamarin2.Android.dll",
+		"ExpandableView.dll",
 		"FormsViewGroup.dll",
 		"NitrogenXamarin2.dll",
 		"Xamarin.AndroidX.Activity.dll",

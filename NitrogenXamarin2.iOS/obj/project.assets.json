@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "ExpandableView/1.0.10": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.4.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/ExpandableView.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/ExpandableView.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -155,6 +167,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "ExpandableView": "1.0.10",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012"
         },
@@ -167,6 +180,18 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "ExpandableView/1.0.10": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.4.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/ExpandableView.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/ExpandableView.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -320,6 +345,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "ExpandableView": "1.0.10",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012"
         },
@@ -332,6 +358,18 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "ExpandableView/1.0.10": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.4.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/ExpandableView.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/ExpandableView.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -485,6 +523,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "ExpandableView": "1.0.10",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012"
         },
@@ -497,6 +536,18 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "ExpandableView/1.0.10": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.4.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/ExpandableView.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/ExpandableView.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -650,6 +701,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "ExpandableView": "1.0.10",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012"
         },
@@ -663,6 +715,21 @@
     }
   },
   "libraries": {
+    "ExpandableView/1.0.10": {
+      "sha512": "uzLIepGkNGBKRlsktnHeJowqUznhThVKku/QYjhacX4jytV+8JjpLAWNu/n0FoLa0EOf5Yd8HlUjWTdVMV3wHA==",
+      "type": "package",
+      "path": "expandableview/1.0.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "expandableview.1.0.10.nupkg.sha512",
+        "expandableview.nuspec",
+        "lib/MonoAndroid10/ExpandableView.dll",
+        "lib/Xamarin.iOS10/ExpandableView.dll",
+        "lib/netstandard2.0/ExpandableView.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/ExpandableView.dll"
+      ]
+    },
     "System.Numerics.Vectors/4.5.0": {
       "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
@@ -985,6 +1052,7 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
+      "ExpandableView >= 1.0.10",
       "NitrogenXamarin2 >= 1.0.0",
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Forms >= 5.0.0.2012"
@@ -1032,6 +1100,10 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "ExpandableView": {
+            "target": "Package",
+            "version": "[1.0.10, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.6.1, )"

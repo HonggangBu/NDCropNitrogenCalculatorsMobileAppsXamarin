@@ -42,6 +42,10 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
+            "ExpandableView": {
+              "target": "Package",
+              "version": "[1.0.10, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.6.1, )"
@@ -105,6 +109,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "ExpandableView": {
+              "target": "Package",
+              "version": "[1.0.10, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

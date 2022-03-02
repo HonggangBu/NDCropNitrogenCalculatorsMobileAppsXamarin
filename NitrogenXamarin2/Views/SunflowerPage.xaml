@@ -2,13 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NitrogenXamarin2.Views.SunflowerPage"
-             Title="Sunflower Nitrogen Calculator">
-    
+             Title="Sunflower Nitrogen Calculator"
+             xmlns:expandable="clr-namespace:Expandable;assembly=ExpandableView">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Style="{StaticResource PageBackgroundColor}"  VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <Label Text="This is sunflower calculator."
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

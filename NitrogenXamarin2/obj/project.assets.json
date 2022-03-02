@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "ExpandableView/1.0.10": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/ExpandableView.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ExpandableView.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -67,6 +79,21 @@
     }
   },
   "libraries": {
+    "ExpandableView/1.0.10": {
+      "sha512": "uzLIepGkNGBKRlsktnHeJowqUznhThVKku/QYjhacX4jytV+8JjpLAWNu/n0FoLa0EOf5Yd8HlUjWTdVMV3wHA==",
+      "type": "package",
+      "path": "expandableview/1.0.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "expandableview.1.0.10.nupkg.sha512",
+        "expandableview.nuspec",
+        "lib/MonoAndroid10/ExpandableView.dll",
+        "lib/Xamarin.iOS10/ExpandableView.dll",
+        "lib/netstandard2.0/ExpandableView.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/ExpandableView.dll"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -528,6 +555,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "ExpandableView >= 1.0.10",
       "NETStandard.Library >= 2.0.3",
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Forms >= 5.0.0.2012"
@@ -577,6 +605,10 @@
       "netstandard2.0": {
         "targetAlias": "netstandard2.0",
         "dependencies": {
+          "ExpandableView": {
+            "target": "Package",
+            "version": "[1.0.10, )"
+          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",

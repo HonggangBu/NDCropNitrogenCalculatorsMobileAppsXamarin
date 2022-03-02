@@ -1,48 +1,124 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:expandable="clr-namespace:Expandable;assembly=ExpandableView"
              x:Class="NitrogenXamarin2.Views.AboutPage"
              Title="About">
-    
-       
+
+
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Color x:Key="Accent">#96d1ff</Color>
+            <Style x:Key="CollapsibleLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="10" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="DarkOliveGreen" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+            <Style x:Key="ContentLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid>
+    <Grid Style="{StaticResource PageBackgroundColor}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
-                </ContentView>
-            </StackLayout>
+        <StackLayout HorizontalOptions="Fill">
+            <Image Source="sunflowerCornWheat.png"/>
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Label Text="Start developing now" FontSize="Title"/>
-                <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0"/>
-                <Label FontSize="16" Padding="0,24,0,0">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Learn more at "/>
-                                <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Button Margin="0,10,0,0" Text="Learn more"
-                        BackgroundColor="{StaticResource Primary}"
-                        TextColor="White"
-                        Clicked="Button_Clicked"/>
+                <expandable:ExpandableView>
+                    <expandable:ExpandableView.PrimaryView>
+                        <Label Style="{StaticResource CollapsibleLabelStyle}">
+                            INTRODUCTION
+                        </Label>
+                    </expandable:ExpandableView.PrimaryView>
+                    <expandable:ExpandableView.SecondaryViewTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Label Style="{StaticResource ContentLabelStyle}">
+                                    This application provides three NDSU crop nitrogen recommendation calculators for use in North Dakota sunflower, corn, and spring wheat/durum, respectively.
+                                </Label>
+                                <Label></Label>
+                                <Label Style="{StaticResource ContentLabelStyle}">
+                                    These calculators are designed only for use by growers and crop consultants working within in North Dakota. The corn calculator might also be useful in northwest Minnesota, the northern tier of counties in South Dakota, and southern Manitoba, since data from these areas were used to build the algorithms embedded within the recommendations; however, consideration of local Province or State recommendations should also be given.
+                                </Label>
+                                <Label></Label>
+                                <Label Style="{StaticResource ContentLabelStyle}">
+                                    The research N-rate data-base underlying these calculators is from the many-years of field research conducted by Dr. David Franzen, Soil Extension Specialist at North Dakota State University, and others.
+                                </Label>
+                                <Label></Label>
+                                <Label Style="{StaticResource ContentLabelStyle}">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Nitrogen recommendation calculations are based on an economic production function that takes into account the yield response of the crop to added N, less the cost of the N. The recommendation is based not only on the yield increase from additional N, but the price of the commodity and the cost of N. More details about this &quot; Maximum Return to Nitrogen &quot; recommendation system can be found " />
+                                            <Span Text="here" TextColor="Blue" TextDecorations="Underline">
+                                                <Span.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="TapGestureRecognizerPDF_Tapped"></TapGestureRecognizer>
+                                                </Span.GestureRecognizers>
+                                            </Span>
+                                            <Span Text="." />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <Label></Label>
+                                <Label Style="{StaticResource ContentLabelStyle}">
+                                    The recommendation provided also includes a "plus-minus" value. Although many experiments were used to develop these recommendations, there is no way for us to know the N supplying capability for the soils in each field in North Dakota. Therefore, we leave it to the growers and their consultants to fine tune recommendations with their knowledge of specific field characteristics. This is especially important in wheat, where variety choice influences protein and the need for more or less N. Also, choice of N application method and decision to use effective urease or nitrification inhibitors may modify N rate.
+                                </Label>
+                            </StackLayout>
+                        </DataTemplate>
+                    </expandable:ExpandableView.SecondaryViewTemplate>
+                </expandable:ExpandableView>
+                <expandable:ExpandableView>
+                    <expandable:ExpandableView.PrimaryView>
+                        <Label Style="{StaticResource CollapsibleLabelStyle}">
+                            CONTACT
+                        </Label>
+                    </expandable:ExpandableView.PrimaryView>
+                    <expandable:ExpandableView.SecondaryViewTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <StackLayout>
+                                    <Image Source="Franzen.jpeg" WidthRequest="180"/>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="Center">
+                                    <Label FontSize="Micro" FontAttributes="Italic" TextDecorations="Underline">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="https://www.ndsu.edu/snrs/people/faculty/dave_franzen/" TextColor="Blue" TextDecorations="Underline">
+                                                    <Span.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                                                    </Span.GestureRecognizers>
+                                                </Span>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="Center">
+                                    <Label FontSize="Large" FontAttributes="Bold">David Franzen</Label>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="Center">
+                                    <Label FontSize="Medium" FontAttributes="Bold,Italic">Professor/PhD</Label>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="Center">
+                                    <Label FontSize="Medium" FontAttributes="Bold,Italic">Extension Soil Specialist</Label>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="Center">
+                                    <Label FontSize="Medium" TextColor="DarkBlue">Email: david.franzen@ndsu.edu</Label>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="Center">
+                                    <Label FontSize="Medium" TextColor="DarkBlue">phone: 701-799-2565</Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </DataTemplate>
+                    </expandable:ExpandableView.SecondaryViewTemplate>
+                </expandable:ExpandableView>
             </StackLayout>
         </ScrollView>
     </Grid>
-
 </ContentPage>

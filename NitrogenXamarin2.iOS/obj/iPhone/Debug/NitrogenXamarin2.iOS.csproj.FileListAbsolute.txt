@@ -1,5 +1,6 @@
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.iOS\bin\iPhone\Debug\NitrogenXamarin2.iOS.exe
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.iOS\bin\iPhone\Debug\NitrogenXamarin2.iOS.pdb
+C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.iOS\bin\iPhone\Debug\ExpandableView.dll
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.iOS\bin\iPhone\Debug\Xamarin.Essentials.dll
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.iOS\bin\iPhone\Debug\Xamarin.Essentials.pdb
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.iOS\bin\iPhone\Debug\Xamarin.Forms.Core.dll
