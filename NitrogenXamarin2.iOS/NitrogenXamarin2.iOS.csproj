@@ -181,4 +181,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\Franzen.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ND2.jpg" />
+  </ItemGroup>
 </Project>

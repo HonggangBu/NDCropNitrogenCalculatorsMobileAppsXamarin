@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -17,6 +17,20 @@
     <EmbeddedResource Remove="Views\ItemsPage.xaml" />
     <EmbeddedResource Remove="Views\LoginPage.xaml" />
     <EmbeddedResource Remove="Views\NewItemPage.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Franzen.jpeg" />
+    <None Remove="Images\ND.jpg" />
+    <None Remove="Images\ND_ThreeRegion.png" />
+    <None Remove="Images\sunflowerCornWheat.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Franzen.jpeg" />
+    <EmbeddedResource Include="Images\ND.jpg" />
+    <EmbeddedResource Include="Images\ND_ThreeRegion.png" />
+    <EmbeddedResource Include="Images\sunflowerCornWheat.png" />
   </ItemGroup>
 
   <ItemGroup>

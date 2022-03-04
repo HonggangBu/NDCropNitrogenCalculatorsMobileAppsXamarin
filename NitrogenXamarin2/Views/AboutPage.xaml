@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:expandable="clr-namespace:Expandable;assembly=ExpandableView"
+             xmlns:local="clr-namespace:NitrogenXamarin2"
              x:Class="NitrogenXamarin2.Views.AboutPage"
              Title="About">
 
@@ -27,8 +28,11 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackLayout HorizontalOptions="Fill">
+        <!--<StackLayout HorizontalOptions="Fill">
             <Image Source="sunflowerCornWheat.png"/>
+        </StackLayout>-->
+        <StackLayout Padding="5">
+            <Image Source="{local:ImageResource NitrogenXamarin2.Images.sunflowerCornWheat.png}" HeightRequest="150"/>
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
@@ -77,6 +81,23 @@
                 <expandable:ExpandableView>
                     <expandable:ExpandableView.PrimaryView>
                         <Label Style="{StaticResource CollapsibleLabelStyle}">
+                            DOCUMENT
+                        </Label>
+                    </expandable:ExpandableView.PrimaryView>
+                    <expandable:ExpandableView.SecondaryViewTemplate>
+                        <DataTemplate>
+                            <StackLayout HorizontalOptions="CenterAndExpand">
+                                <Button Text="Sunflower" Clicked="SunflowerDoc_Button_Clicked"/>
+                                <Button Text="Corn" Clicked="CornDoc_Button_Clicked"/>
+                                <Button Text="Wheat/Durum" Clicked="WheatDoc_Button_Clicked"/>
+                                <Button Text="Maximum Return to N Approach" Clicked="MaxReturnN_Button_Clicked"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </expandable:ExpandableView.SecondaryViewTemplate>
+                </expandable:ExpandableView>
+                <expandable:ExpandableView>
+                    <expandable:ExpandableView.PrimaryView>
+                        <Label Style="{StaticResource CollapsibleLabelStyle}">
                             CONTACT
                         </Label>
                     </expandable:ExpandableView.PrimaryView>
@@ -84,7 +105,7 @@
                         <DataTemplate>
                             <StackLayout>
                                 <StackLayout>
-                                    <Image Source="Franzen.jpeg" WidthRequest="180"/>
+                                    <Image Source="{local:ImageResource NitrogenXamarin2.Images.Franzen.jpeg}" WidthRequest="180"/>
                                 </StackLayout>
                                 <StackLayout HorizontalOptions="Center">
                                     <Label FontSize="Micro" FontAttributes="Italic" TextDecorations="Underline">

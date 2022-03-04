@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using NitrogenXamarin2.CommonData;
 
 namespace NitrogenXamarin2.Views
 {
@@ -15,6 +15,7 @@ namespace NitrogenXamarin2.Views
         public SunflowerPage()
         {
             InitializeComponent();
+            //testLabel.Text = " "+ SunflowerBaseTables.sfWOC[0, 3] +" ";
         }
     }
 }
