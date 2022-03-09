@@ -12,18 +12,95 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <ContentPage.Content>
+    <ScrollView>
         <StackLayout Style="{StaticResource PageBackgroundColor}">
-            <!--<Label x:Name="testLabel"
-                Text="This is sunflower calculator."
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />-->
-            <StackLayout Padding="5">
-                <Image Source="{local:ImageResource NitrogenXamarin2.Images.ND_ThreeRegion.png}" HeightRequest="240"/>
-            </StackLayout>
-            <!--<StackLayout HorizontalOptions="Fill">
-                <Image Source="ND2.jpg"/>
-            </StackLayout>-->
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5">
+                    <StackLayout>
+                        <Image Source="{local:ImageResource NitrogenXamarin2.Images.ND_ThreeRegion.png}" HeightRequest="240"/>
+                    </StackLayout>
+                    <Label FontSize="Medium" Text="Select your region based on the above map:"/>
+                    <RadioButton x:Name="westRBtn" Content="Western ND" IsChecked="True"/>
+                    <RadioButton x:Name="eastRBtn" Content="Eastern ND"/>
+                    <RadioButton x:Name="langdonRBtn" Content="Langdon Area"/>
+                </StackLayout>
+            </Frame>
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5">
+                    <Label FontSize="Medium" Text="Select your tillage type:"/>
+                    <StackLayout Orientation="Horizontal">
+                        <RadioButton x:Name="ConventionalTillRBtn" Content="Conventional Tillage" IsChecked="True"/>
+                        <Label x:Name="ConvDef">[Definition]</Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <RadioButton x:Name="MinNotillRBtn" Content="Minimal No-till"/>
+                        <Label x:Name="MinDef">[Definition]</Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <RadioButton x:Name="LongtermNotillRBtn" Content="Long-term No-till"/>
+                        <Label x:Name="LongDef">[Definition]</Label>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5">
+                    <Label FontSize="Medium" Text="Select your sunflower type:"/>
+                    <RadioButton x:Name="oilseedRBtn" Content="Oilseed" IsChecked="True"/>
+                    <RadioButton x:Name="confectionRBtn" Content="Confection"/>
+                </StackLayout>
+            </Frame>
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5">
+                    <Label>Tap the item below to select the closest sunflower price ($/lb)</Label>
+                    <Picker x:Name="sfPricePicker"
+                     Title="Select the closest sunflower price ($/lb)"
+                            Style="{StaticResource PickerStyle}">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:Double}">
+                                <x:Double>0.09</x:Double>
+                                <x:Double>0.12</x:Double>
+                                <x:Double>0.15</x:Double>
+                                <x:Double>0.18</x:Double>
+                                <x:Double>0.21</x:Double>
+                                <x:Double>0.24</x:Double>
+                                <x:Double>0.27</x:Double>
+                                <x:Double>0.30</x:Double>
+                                <x:Double>0.33</x:Double>
+                                <x:Double>0.36</x:Double>
+                                <x:Double>0.39</x:Double>
+                                <x:Double>0.42</x:Double>
+                                <x:Double>0.45</x:Double>
+                                <x:Double>0.48</x:Double>
+                                <x:Double>0.51</x:Double>
+                                <x:Double>0.55</x:Double>
+                                <x:Double>0.60</x:Double>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+            </Frame>
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5">
+                    <Label>Tap the item below to select the closest nitrogen cost ($/lb)</Label>
+                    <Picker x:Name="sfNitrogenCostPicker"
+                    Title="select the closest nitrogen cost ($/lb)"
+                    Style="{StaticResource PickerStyle}"/>
+                </StackLayout>
+            </Frame>
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5">
+                    <Label>Tap the item below to select the previous crops planted</Label>
+                    <Picker x:Name="sfPreviousCropPicker"
+                    Title="select the previous crops planted"
+                    Style="{StaticResource PickerStyle}"/>
+                </StackLayout>
+            </Frame>
+            
+           
+
+
+
+
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>

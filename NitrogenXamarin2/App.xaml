@@ -10,6 +10,15 @@
             <Style x:Key="PageBackgroundColor" TargetType="ContentPage">
                 <Setter Property="BackgroundColor" Value="Azure"/>
             </Style>
+            <Style x:Key="FrameStyle" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="15"/>
+                <Setter Property="OutlineColor" Value="DarkOrange"/>
+                <Setter Property="BackgroundColor" Value="Azure"/>
+            </Style>
+            <Style x:Key="PickerStyle" TargetType="Picker">
+                <Setter Property="TitleColor" Value="DarkSlateBlue"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
             <Color x:Key="Primary">#2196F3</Color>
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
