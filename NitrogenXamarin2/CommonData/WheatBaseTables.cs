@@ -201,55 +201,55 @@ namespace NitrogenXamarin2.CommonData
     {195, 189, 183, 177, 171, 164, 164, 161, 155, 149, 143, 137, 131, 125, 119, 113, 107, 101, 95}
 };
 
-        // east_low_minNoTill 11
+        // east_low_minNoTill
         public static readonly int[,] wheatELM = CommonFunctions.GetNewTable(wheatELC, minNotillDiff);
 
-        // east_low_longNoTill 12
+        // east_low_longNoTill
         public static readonly int[,] wheatELL = CommonFunctions.GetNewTable(wheatELC, eastWestLongNotillDiff);
 
-        // west_low_minNoTill 13
+        // west_low_minNoTill
         public static readonly int[,] wheatWLM = CommonFunctions.GetNewTable(wheatWLC, minNotillDiff);
 
-        // west_low_longNoTill 14
+        // west_low_longNoTill
         public static readonly int[,] wheatWLL = CommonFunctions.GetNewTable(wheatWLC, eastWestLongNotillDiff);
 
-        // langdon_low_minNoTill 15
+        // langdon_low_minNoTill
         public static readonly int[,] wheatLLM = CommonFunctions.GetNewTable(wheatLLC, minNotillDiff);
 
-        // langdon_low_longNoTill 16
+        // langdon_low_longNoTill
         public static readonly int[,] wheatLLL = CommonFunctions.GetNewTable(wheatLLC, langdonLongNotillDiff);
 
-        // east_medium_minNoTill 17
+        // east_medium_minNoTill
         public static readonly int[,] wheatEMM = CommonFunctions.GetNewTable(wheatEMC, minNotillDiff);
 
-        // west_medium_minNoTill 18
+        // west_medium_minNoTill
         public static readonly int[,] wheatWMM = CommonFunctions.GetNewTable(wheatWMC, minNotillDiff);
 
-        // west_medium_longNoTill 19
+        // west_medium_longNoTill
         public static readonly int[,] wheatWML = CommonFunctions.GetNewTable(wheatWMC, eastWestLongNotillDiff);
 
-        // langdon_medium_minNoTill 20
+        // langdon_medium_minNoTill
         public static readonly int[,] wheatLMM = CommonFunctions.GetNewTable(wheatLMC, minNotillDiff);
 
-        // langdon_medium_longNoTill 21
+        // langdon_medium_longNoTill
         public static readonly int[,] wheatLML = CommonFunctions.GetNewTable(wheatLMC, langdonLongNotillDiff);
 
         // east_high_minNoTill
         public static readonly int[,] wheatEHM = CommonFunctions.GetNewTable(wheatEHC, minNotillDiff);
 
-        // east_high_longNoTill 12
+        // east_high_longNoTill
         public static readonly int[,] wheatEHL = CommonFunctions.GetNewTable(wheatEHC, eastWestLongNotillDiff);
 
-        // west_high_minNoTill 13
+        // west_high_minNoTill
         public static readonly int[,] wheatWHM = CommonFunctions.GetNewTable(wheatWHC, minNotillDiff);
 
-        // west_high_longNoTill 14
+        // west_high_longNoTill
         public static readonly int[,] wheatWHL = CommonFunctions.GetNewTable(wheatWHC, eastWestLongNotillDiff);
 
-        // langdon_high_minNoTill 15
+        // langdon_high_minNoTill
         public static readonly int[,] wheatLHM = CommonFunctions.GetNewTable(wheatLHC, minNotillDiff);
 
-        // langdon_high_longNoTill 16
+        // langdon_high_longNoTill
         public static readonly int[,] wheatLHL = CommonFunctions.GetNewTable(wheatLHC, langdonLongNotillDiff);
 
     }

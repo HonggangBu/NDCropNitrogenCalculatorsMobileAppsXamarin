@@ -146,7 +146,7 @@ namespace NitrogenXamarin2.CommonData
         public static readonly int[,] sfWOC = CommonFunctions.GetNewTable(sfWOL, sfConvTillDiff);
 
         // sunflower Western Confection Conventional till
-        public static readonly int[,] sfWCC = CommonFunctions.GetNewTable(sfWOL, sfConvTillDiff);
+        public static readonly int[,] sfWCC = CommonFunctions.GetNewTable(sfWCL, sfConvTillDiff);
 
         //sunflower Western Confection Minimal notill
         public static readonly int[,] sfWCM = CommonFunctions.GetNewTable(sfWCC, sfMinNotillDiff);

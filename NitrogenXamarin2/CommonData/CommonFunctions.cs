@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace NitrogenXamarin2.CommonData
@@ -35,7 +36,7 @@ namespace NitrogenXamarin2.CommonData
             //tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
             tapGestureRecognizer.Tapped += async (s, e) =>
             {
-                await App.Current.MainPage.DisplayAlert(title, text, "OK");
+                await Application.Current.MainPage.DisplayAlert(title, text, "OK");
             };
             label.GestureRecognizers.Add(tapGestureRecognizer);
         }
@@ -44,30 +45,40 @@ namespace NitrogenXamarin2.CommonData
         public static string GetRegion(RadioButton westND, RadioButton eastND, RadioButton langdonArea)
         {
             if (westND.IsChecked)
+            {
                 return "W";
+            }
             else if (eastND.IsChecked)
+            {
                 return "E";
-            else return "L";
+            }
+            else
+            {
+                return "L";
+            }
         }
 
 
         public static string GetRegion(RadioButton westND, RadioButton eastND)
         {
-            if (westND.IsChecked)
-                return "W";
-            else
-                return "E";
+            return westND.IsChecked ? "W" : "E";
         }
 
 
         public static string GetTillageType(RadioButton convTill, RadioButton minNotill, RadioButton longTermNotill)
         {
             if (convTill.IsChecked)
+            {
                 return "C";
+            }
             else if (minNotill.IsChecked)
+            {
                 return "M";
+            }
             else
+            {
                 return "L";
+            }
         }
 
 
@@ -102,8 +113,52 @@ namespace NitrogenXamarin2.CommonData
 
         public static int GetPreviousCropCredit(Picker cropPicker)
         {
-            int[] credits = {0,40,0,30,80,150,100,50,0 }; // same order as the previous crops dropdown list
+            int[] credits = { 0, 40, 0, 30, 80, 150, 100, 50, 0 }; // same order as the previous crops dropdown list
             return credits[cropPicker.SelectedIndex];
+        }
+
+        // entry type: "TN"---soil test nitrate N; "OM"---soil organic matter in percentage
+        public static bool IsEntryTextValid(Entry entry, string entryType)
+        {
+            bool isValid = true;
+            string t = entry.Text;
+            if (string.IsNullOrEmpty(t))
+            {
+                isValid = false;
+            }
+            else
+            {
+                double x = Convert.ToDouble(t);
+                if ((x > 100 && entryType == "OM") || (x < 0))
+                {
+                    isValid = false;
+                }
+            }
+            return isValid;
+        }
+
+        // Get the final recommendation (after credit) result
+        public static int GetFinalResult(int baseValue, int prevCropNCredit, int soilTestNCredit, int soilOrganicMatterNCredit)
+        {
+            int x = baseValue - prevCropNCredit - soilTestNCredit - soilOrganicMatterNCredit;
+            return x > 0 ? x : 0;
+        }
+
+        //
+        public static async void DisplayErrorMessage(Entry nitrateNEntry, Entry organicMatterEntry)
+        {
+            if (IsEntryTextValid(nitrateNEntry, "TN") && !IsEntryTextValid(organicMatterEntry, "OM"))
+            {
+                await Application.Current.MainPage.DisplayAlert("Input Error", "Your soil organic matter percentage input is invalid!", "OK");
+            }
+            else if (!IsEntryTextValid(nitrateNEntry, "TN") && IsEntryTextValid(organicMatterEntry, "OM"))
+            {
+                await Application.Current.MainPage.DisplayAlert("Input Error", "Your soil test nitrate-nitrogen input is invalid!", "OK");
+            }
+            else
+            {
+                await Application.Current.MainPage.DisplayAlert("Input Error", "Both the soil test nitrate-nitrogen input and the soil organic matter percentage input are invalid!", "OK");
+            }
         }
     }
 }

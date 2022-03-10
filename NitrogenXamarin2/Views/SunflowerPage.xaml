@@ -15,7 +15,7 @@
     <ScrollView>
         <StackLayout Style="{StaticResource PageBackgroundColor}">
             <Frame Style="{StaticResource FrameStyle}">
-                <StackLayout Padding="5">
+                <StackLayout Padding="5" RadioButtonGroup.GroupName="RegionRBtn">
                     <StackLayout>
                         <Image Source="{local:ImageResource NitrogenXamarin2.Images.ND_ThreeRegion.png}" HeightRequest="240"/>
                     </StackLayout>
@@ -26,7 +26,7 @@
                 </StackLayout>
             </Frame>
             <Frame Style="{StaticResource FrameStyle}">
-                <StackLayout Padding="5">
+                <StackLayout Padding="5" RadioButtonGroup.GroupName="TillageRBtn">
                     <Label FontSize="Medium" Text="Select your tillage type:"/>
                     <StackLayout Orientation="Horizontal">
                         <RadioButton x:Name="ConventionalTillRBtn" Content="Conventional Tillage" IsChecked="True"/>
@@ -43,7 +43,7 @@
                 </StackLayout>
             </Frame>
             <Frame Style="{StaticResource FrameStyle}">
-                <StackLayout Padding="5">
+                <StackLayout Padding="5" RadioButtonGroup.GroupName="SunflowerTypeRBtn">
                     <Label FontSize="Medium" Text="Select your sunflower type:"/>
                     <RadioButton x:Name="oilseedRBtn" Content="Oilseed" IsChecked="True"/>
                     <RadioButton x:Name="confectionRBtn" Content="Confection"/>
@@ -51,7 +51,7 @@
             </Frame>
             <Frame Style="{StaticResource FrameStyle}">
                 <StackLayout Padding="5">
-                    <Label>Tap the item below to select the closest sunflower price ($/lb)</Label>
+                    <Label FontSize="Medium">Tap the item below to select the closest sunflower price ($/lb)</Label>
                     <Picker x:Name="sfPricePicker"
                      Title="Select the closest sunflower price ($/lb)"
                             Style="{StaticResource PickerStyle}">
@@ -81,7 +81,7 @@
             </Frame>
             <Frame Style="{StaticResource FrameStyle}">
                 <StackLayout Padding="5">
-                    <Label>Tap the item below to select the closest nitrogen cost ($/lb)</Label>
+                    <Label FontSize="Medium">Tap the item below to select the closest nitrogen cost ($/lb)</Label>
                     <Picker x:Name="sfNitrogenCostPicker"
                     Title="select the closest nitrogen cost ($/lb)"
                     Style="{StaticResource PickerStyle}"/>
@@ -89,18 +89,28 @@
             </Frame>
             <Frame Style="{StaticResource FrameStyle}">
                 <StackLayout Padding="5">
-                    <Label>Tap the item below to select the previous crops planted</Label>
+                    <Label FontSize="Medium">Tap the item below to select the previous crops planted</Label>
                     <Picker x:Name="sfPreviousCropPicker"
                     Title="select the previous crops planted"
                     Style="{StaticResource PickerStyle}"/>
                 </StackLayout>
             </Frame>
-            
-           
-
-
-
-
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5">
+                    <Label FontSize="Medium">Enter the nitrate-N result of the 2-ft depth soil test (lbs/acre): a nonnegative value</Label>
+                    <Entry x:Name="soilTestNEntry" Placeholder="Enter a nonnegative value here" Style="{StaticResource EntryStyle}"/>
+                </StackLayout>
+            </Frame>
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5">
+                    <Label FontSize="Medium">Enter the percent organic matter in soil (%): a value between 0 and 100</Label>
+                    <Entry x:Name="soilOrganicMatterEntry" Placeholder="Enter a value between 0 and 100" Style="{StaticResource EntryStyle}"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout Padding="15" HorizontalOptions="Fill">
+                <Button x:Name="CalculateBtn" Text="CALCULATE" BackgroundColor="DarkGoldenrod" FontAttributes="Bold" Clicked="CalculateBtn_Clicked"/>
+            </StackLayout>
+  
         </StackLayout>
     </ScrollView>
 </ContentPage>

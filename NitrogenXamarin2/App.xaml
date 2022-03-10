@@ -19,9 +19,16 @@
                 <Setter Property="TitleColor" Value="DarkSlateBlue"/>
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
             </Style>
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="Text" Value="0"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="Keyboard" Value="Numeric"/>
+            </Style>
             <Color x:Key="Primary">#2196F3</Color>
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Medium"/>
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">

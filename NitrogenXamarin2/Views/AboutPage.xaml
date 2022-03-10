@@ -20,6 +20,14 @@
             <Style x:Key="ContentLabelStyle" TargetType="Label">
                 <Setter Property="FontSize" Value="Medium"/>
             </Style>
+            <Style x:Key="NoteLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="DarkBlue"/>
+                <Setter Property="Padding" Value="10,10"/>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -34,8 +42,10 @@
         <StackLayout Padding="5">
             <Image Source="{local:ImageResource NitrogenXamarin2.Images.sunflowerCornWheat.png}" HeightRequest="150"/>
         </StackLayout>
+        
         <ScrollView Grid.Row="1">
-            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+            <StackLayout Orientation="Vertical" Padding="20,5,20,10" Spacing="10">
+                <Label>Click a button to expand or collapse the corresponding content.</Label>
                 <expandable:ExpandableView>
                     <expandable:ExpandableView.PrimaryView>
                         <Label Style="{StaticResource CollapsibleLabelStyle}">
@@ -78,6 +88,55 @@
                         </DataTemplate>
                     </expandable:ExpandableView.SecondaryViewTemplate>
                 </expandable:ExpandableView>
+
+                <expandable:ExpandableView>
+                    <expandable:ExpandableView.PrimaryView>
+                        <Label Style="{StaticResource CollapsibleLabelStyle}">
+                            NOTE ABOUT THE RESULT
+                        </Label>
+                    </expandable:ExpandableView.PrimaryView>
+                    <expandable:ExpandableView.SecondaryViewTemplate>
+                        <DataTemplate>
+                            <StackLayout HorizontalOptions="Center">
+                                <expandable:ExpandableView>
+                                    <expandable:ExpandableView.PrimaryView>
+                                        <Label Text="Sunflower" Style="{StaticResource NoteLabelStyle}"/>
+                                    </expandable:ExpandableView.PrimaryView>
+                                    <expandable:ExpandableView.SecondaryView>
+                                        <Label Style="{StaticResource ContentLabelStyle}">
+                                            The final N recommendation is an average optimal rate. Your final N rate decision may be plus or minus 20 pounds N per acre from that value depending on individual field situations. The value assumes an optimal N application and timing strategy. If these strategies are not optimal, a greater N rate maybe needed. Suboptimal N application strategies include to early N application the fall prior to seeding, surface urea/UAN application or lightly incorporated urea/UAN, or shallow ammonia application. Fields that are first year sunflower, or sunflower more then 4 years after a deep rooted crop including sunflower may have have deep N, and a minimal N preplant application followed by side-dress application at V5-V8 is recommended.
+                                        </Label>
+                                    </expandable:ExpandableView.SecondaryView>
+                                </expandable:ExpandableView>
+                                <expandable:ExpandableView>
+                                    <expandable:ExpandableView.PrimaryView>
+                                        <Label Text="Wheat/Durum" Style="{StaticResource NoteLabelStyle}"/>
+                                    </expandable:ExpandableView.PrimaryView>
+                                    <expandable:ExpandableView.SecondaryView>
+                                        <Label Style="{StaticResource ContentLabelStyle}">
+                                            Nitrogen recommendation in this app is based on an economic production function that takes into account the yield response of corn to added N, less the cost of the N.
+
+The final Nitrogen recommendation is the average optimal rate. Growers may choose to apply up to 30 lb N/acre more or less than the calculated N rates due to protein traits of a variety, special soil conditions such as susceptibility to spring denitrification, application techniques that may not be most efficient or historical experiences from the field or part of a field that may influence N uptake and efficiency. For wheat after small grains, we assume about 2,000 lb/acre of straw residue. For every 2,000 lb/acre straw greater than this, add 30 lb N/acre.
+                                        </Label>
+                                    </expandable:ExpandableView.SecondaryView>
+                                </expandable:ExpandableView>
+                                <expandable:ExpandableView>
+                                    <expandable:ExpandableView.PrimaryView>
+                                        <Label Text="Corn" Style="{StaticResource NoteLabelStyle}"/>
+                                    </expandable:ExpandableView.PrimaryView>
+                                    <expandable:ExpandableView.SecondaryView>
+                                        <Label Style="{StaticResource ContentLabelStyle}">
+                                            Nitrogen recommendation in this app is based on an economic production function that takes into account the yield response of corn to added N, less the cost of the N.
+
+High clay soils are subject to N loss due to denitrification in wet years. If spring rainfall is normal and the soil is muddy for less than 10 days, the preplant N recommendation should be sufficient for high yield. If rains result in muddy conditions for more than 10 days, supplemental N as sidedress is strongly recommended. Estimate 1.5% nitrate-N loss per muddy day. A better recommendation is to utilize the high clay soil with yield potential greater than 160 bushels per acre active-optical sensor algorithm to direct variable-rate sidedress rates. The active-optical sensor algorithm will require the grower to establish an N-rich strip in the soil category within a variety for its use.
+                                        </Label>
+                                    </expandable:ExpandableView.SecondaryView>
+                                </expandable:ExpandableView>
+                            </StackLayout>
+                        </DataTemplate>
+                    </expandable:ExpandableView.SecondaryViewTemplate>
+                </expandable:ExpandableView>
+
                 <expandable:ExpandableView>
                     <expandable:ExpandableView.PrimaryView>
                         <Label Style="{StaticResource CollapsibleLabelStyle}">
@@ -87,14 +146,15 @@
                     <expandable:ExpandableView.SecondaryViewTemplate>
                         <DataTemplate>
                             <StackLayout HorizontalOptions="CenterAndExpand">
-                                <Button Text="Sunflower" Clicked="SunflowerDoc_Button_Clicked"/>
-                                <Button Text="Corn" Clicked="CornDoc_Button_Clicked"/>
-                                <Button Text="Wheat/Durum" Clicked="WheatDoc_Button_Clicked"/>
-                                <Button Text="Maximum Return to N Approach" Clicked="MaxReturnN_Button_Clicked"/>
+                                <Button Text="Sunflower" BackgroundColor="DarkBlue" Clicked="SunflowerDoc_Button_Clicked"/>
+                                <Button Text="Wheat/Durum" BackgroundColor="DarkBlue" Clicked="WheatDoc_Button_Clicked"/>
+                                <Button Text="Corn" BackgroundColor="DarkBlue" Clicked="CornDoc_Button_Clicked"/>
+                                <Button Text="Maximum Return to N Approach" BackgroundColor="DarkBlue" Clicked="MaxReturnN_Button_Clicked"/>
                             </StackLayout>
                         </DataTemplate>
                     </expandable:ExpandableView.SecondaryViewTemplate>
                 </expandable:ExpandableView>
+                
                 <expandable:ExpandableView>
                     <expandable:ExpandableView.PrimaryView>
                         <Label Style="{StaticResource CollapsibleLabelStyle}">
@@ -103,7 +163,7 @@
                     </expandable:ExpandableView.PrimaryView>
                     <expandable:ExpandableView.SecondaryViewTemplate>
                         <DataTemplate>
-                            <StackLayout>
+                            <StackLayout HeightRequest="450">
                                 <StackLayout>
                                     <Image Source="{local:ImageResource NitrogenXamarin2.Images.Franzen.jpeg}" WidthRequest="180"/>
                                 </StackLayout>
@@ -135,6 +195,7 @@
                                 <StackLayout HorizontalOptions="Center">
                                     <Label FontSize="Medium" TextColor="DarkBlue">phone: 701-799-2565</Label>
                                 </StackLayout>
+                                
                             </StackLayout>
                         </DataTemplate>
                     </expandable:ExpandableView.SecondaryViewTemplate>
