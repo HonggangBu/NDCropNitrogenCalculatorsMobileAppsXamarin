@@ -120,11 +120,14 @@ namespace NitrogenXamarin2.Views
             return CommonFunctions.GetFinalResult(bv, sfCropCredit, tn, om);
         }
 
-        private async void CalculateBtn_Clicked(object sender, EventArgs e)
+        private void CalculateBtn_Clicked(object sender, EventArgs e)
         {
             if (CommonFunctions.IsEntryTextValid(soilTestNEntry, "TN") && CommonFunctions.IsEntryTextValid(soilOrganicMatterEntry, "OM"))
             {
-                await DisplayAlert("N Recommendation After Credits", "" + GetSunflowerFinalResult() + "        " + "± 20  lbs/acre", "OK");
+                //await DisplayAlert("N Recommendation After Credits", "" + GetSunflowerFinalResult() + "        " + "± 20  lbs/acre", "OK");
+                CalculateBtn.IsVisible = false; 
+                ResultStack.IsVisible = true;
+                ResultLabel.Text = "" + GetSunflowerFinalResult() + "    ± 20  lbs/acre";
             }
             else
             {
@@ -132,5 +135,51 @@ namespace NitrogenXamarin2.Views
             }
         }
 
+        private void OnAnythingChanged()
+        {
+            CalculateBtn.IsVisible = true;
+            ResultStack.IsVisible = false;
+            ResultLabel.Text = "";
+        }
+
+        private void RegionRBtn_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            OnAnythingChanged();
+        }
+
+        private void TillageRBtn_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            OnAnythingChanged();
+        }
+
+        private void SunflowerTypeRBtn_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            OnAnythingChanged();
+        }
+
+        private void SunflowerPricePicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OnAnythingChanged();
+        }
+
+        private void SunflowerPreviousCropPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OnAnythingChanged();
+        }
+
+        private void SunflowerNitrogenCostPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OnAnythingChanged();
+        }
+
+        private void SoilTestNEntry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            OnAnythingChanged();
+        }
+
+        private void SoilOrganicMatterEntry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            OnAnythingChanged();
+        }
     }
 }

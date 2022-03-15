@@ -20,24 +20,24 @@
                         <Image Source="{local:ImageResource NitrogenXamarin2.Images.ND_ThreeRegion.png}" HeightRequest="240"/>
                     </StackLayout>
                     <Label FontSize="Medium" Text="Select your region based on the above map:"/>
-                    <RadioButton x:Name="westRBtn" Content="Western ND" IsChecked="True"/>
-                    <RadioButton x:Name="eastRBtn" Content="Eastern ND"/>
-                    <RadioButton x:Name="langdonRBtn" Content="Langdon Area"/>
+                    <RadioButton x:Name="westRBtn" Content="Western ND" CheckedChanged="RegionRBtn_CheckedChanged" IsChecked="True" />
+                    <RadioButton x:Name="eastRBtn" Content="Eastern ND" CheckedChanged="RegionRBtn_CheckedChanged"/>
+                    <RadioButton x:Name="langdonRBtn" Content="Langdon Area" CheckedChanged="RegionRBtn_CheckedChanged"/>
                 </StackLayout>
             </Frame>
             <Frame Style="{StaticResource FrameStyle}">
                 <StackLayout Padding="5" RadioButtonGroup.GroupName="TillageRBtn">
                     <Label FontSize="Medium" Text="Select your tillage type:"/>
                     <StackLayout Orientation="Horizontal">
-                        <RadioButton x:Name="ConventionalTillRBtn" Content="Conventional Tillage" IsChecked="True"/>
+                        <RadioButton x:Name="ConventionalTillRBtn" Content="Conventional Tillage" CheckedChanged="TillageRBtn_CheckedChanged" IsChecked="True"/>
                         <Label x:Name="ConvDef">[Definition]</Label>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <RadioButton x:Name="MinNotillRBtn" Content="Minimal No-till"/>
+                        <RadioButton x:Name="MinNotillRBtn" Content="Minimal No-till" CheckedChanged="TillageRBtn_CheckedChanged"/>
                         <Label x:Name="MinDef">[Definition]</Label>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <RadioButton x:Name="LongtermNotillRBtn" Content="Long-term No-till"/>
+                        <RadioButton x:Name="LongtermNotillRBtn" Content="Long-term No-till" CheckedChanged="TillageRBtn_CheckedChanged"/>
                         <Label x:Name="LongDef">[Definition]</Label>
                     </StackLayout>
                 </StackLayout>
@@ -45,16 +45,17 @@
             <Frame Style="{StaticResource FrameStyle}">
                 <StackLayout Padding="5" RadioButtonGroup.GroupName="SunflowerTypeRBtn">
                     <Label FontSize="Medium" Text="Select your sunflower type:"/>
-                    <RadioButton x:Name="oilseedRBtn" Content="Oilseed" IsChecked="True"/>
-                    <RadioButton x:Name="confectionRBtn" Content="Confection"/>
+                    <RadioButton x:Name="oilseedRBtn" Content="Oilseed" CheckedChanged="SunflowerTypeRBtn_CheckedChanged" IsChecked="True"/>
+                    <RadioButton x:Name="confectionRBtn" Content="Confection" CheckedChanged="SunflowerTypeRBtn_CheckedChanged"/>
                 </StackLayout>
             </Frame>
             <Frame Style="{StaticResource FrameStyle}">
                 <StackLayout Padding="5">
                     <Label FontSize="Medium">Tap the item below to select the closest sunflower price ($/lb)</Label>
-                    <Picker x:Name="sfPricePicker"
+                    <Picker x:Name="sfPricePicker" 
+                     SelectedIndexChanged="SunflowerPricePicker_SelectedIndexChanged"
                      Title="Select the closest sunflower price ($/lb)"
-                            Style="{StaticResource PickerStyle}">
+                     Style="{StaticResource PickerStyle}">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:Double}">
                                 <x:Double>0.09</x:Double>
@@ -83,6 +84,7 @@
                 <StackLayout Padding="5">
                     <Label FontSize="Medium">Tap the item below to select the closest nitrogen cost ($/lb)</Label>
                     <Picker x:Name="sfNitrogenCostPicker"
+                            SelectedIndexChanged="SunflowerNitrogenCostPicker_SelectedIndexChanged"
                     Title="select the closest nitrogen cost ($/lb)"
                     Style="{StaticResource PickerStyle}"/>
                 </StackLayout>
@@ -91,6 +93,7 @@
                 <StackLayout Padding="5">
                     <Label FontSize="Medium">Tap the item below to select the previous crops planted</Label>
                     <Picker x:Name="sfPreviousCropPicker"
+                            SelectedIndexChanged="SunflowerPreviousCropPicker_SelectedIndexChanged"
                     Title="select the previous crops planted"
                     Style="{StaticResource PickerStyle}"/>
                 </StackLayout>
@@ -98,19 +101,32 @@
             <Frame Style="{StaticResource FrameStyle}">
                 <StackLayout Padding="5">
                     <Label FontSize="Medium">Enter the nitrate-N result of the 2-ft depth soil test (lbs/acre): a nonnegative value</Label>
-                    <Entry x:Name="soilTestNEntry" Placeholder="Enter a nonnegative value here" Style="{StaticResource EntryStyle}"/>
+                    <Entry x:Name="soilTestNEntry" 
+                           Placeholder="Enter a nonnegative value here" 
+                           Style="{StaticResource EntryStyle}"
+                           TextChanged="SoilTestNEntry_TextChanged"/>
                 </StackLayout>
             </Frame>
             <Frame Style="{StaticResource FrameStyle}">
                 <StackLayout Padding="5">
                     <Label FontSize="Medium">Enter the percent organic matter in soil (%): a value between 0 and 100</Label>
-                    <Entry x:Name="soilOrganicMatterEntry" Placeholder="Enter a value between 0 and 100" Style="{StaticResource EntryStyle}"/>
+                    <Entry x:Name="soilOrganicMatterEntry" 
+                           Placeholder="Enter a value between 0 and 100" 
+                           Style="{StaticResource EntryStyle}"
+                           TextChanged="SoilOrganicMatterEntry_TextChanged"/>
                 </StackLayout>
             </Frame>
-            <StackLayout Padding="15" HorizontalOptions="Fill">
-                <Button x:Name="CalculateBtn" Text="CALCULATE" BackgroundColor="DarkGoldenrod" FontAttributes="Bold" Clicked="CalculateBtn_Clicked"/>
+
+            <StackLayout x:Name="ResultStack" Style="{StaticResource ResultStackStyle}">
+                <Label Style="{StaticResource ResultTitleLabelStyle}"/>
+                <Label x:Name="ResultLabel" Style="{StaticResource ResultLabelStyle}"/>
             </StackLayout>
-  
+            <Label/>
+            
+            <Button x:Name="CalculateBtn" Style="{StaticResource CalculateBtnStyle}" Clicked="CalculateBtn_Clicked"/>
+            <Label/>
         </StackLayout>
+
     </ScrollView>
+
 </ContentPage>

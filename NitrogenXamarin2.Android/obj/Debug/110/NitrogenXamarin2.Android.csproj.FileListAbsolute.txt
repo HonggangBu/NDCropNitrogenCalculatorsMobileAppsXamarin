@@ -54,14 +54,10 @@ C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.Android\obj\De
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\110\res\mipmap-xxhdpi\launcher_foreground.png
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\110\res\mipmap-xxxhdpi\icon.png
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\110\res\mipmap-xxxhdpi\launcher_foreground.png
-C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\110\res\drawable\xamarin_logo.png
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\110\res\drawable\icon_about.png
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\110\res\drawable\icon_sunflower.png
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\110\res\drawable\icon_corn.png
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\110\res\drawable\icon_wheat.png
-C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\110\res\drawable\sunflowercornwheat.png
-C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\110\res\drawable\franzen.jpeg
-C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\110\res\drawable\nd2.jpg
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\110\uploadflags.txt
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\110\resolvedassemblies.hash
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\110\android\assets\ExpandableView.dll

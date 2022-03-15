@@ -36,9 +36,7 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <!--<StackLayout HorizontalOptions="Fill">
-            <Image Source="sunflowerCornWheat.png"/>
-        </StackLayout>-->
+        
         <StackLayout Padding="5">
             <Image Source="{local:ImageResource NitrogenXamarin2.Images.sunflowerCornWheat.png}" HeightRequest="150"/>
         </StackLayout>

@@ -7,6 +7,35 @@
     -->
     <Application.Resources>
         <ResourceDictionary>
+            <Style x:Key="CalculateBtnStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="DarkGoldenrod"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="Text" Value="CALCULATE"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="IsEnabled" Value="True"/>
+                <Setter Property="IsVisible" Value="True"/>
+            </Style>
+            <Style x:Key="ResultStackStyle" TargetType="StackLayout">
+                <Setter Property="IsVisible" Value="false"/>
+                <Setter Property="Padding" Value="1,2,1,10"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="BackgroundColor" Value="DarkGreen"/>
+            </Style>
+            <Style x:Key="ResultTitleLabelStyle" TargetType="Label">
+                <Setter Property="Text" Value="N Recommendation After Credits"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="Padding" Value="2"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style x:Key="ResultLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="Margin" Value="0,5,0,10"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
             <Style x:Key="PageBackgroundColor" TargetType="ContentPage">
                 <Setter Property="BackgroundColor" Value="Azure"/>
             </Style>

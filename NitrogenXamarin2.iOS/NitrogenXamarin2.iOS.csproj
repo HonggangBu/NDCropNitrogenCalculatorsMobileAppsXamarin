@@ -115,9 +115,6 @@
     <BundleResource Include="Resources\icon_about.png" />
     <BundleResource Include="Resources\icon_about%402x.png" />
     <BundleResource Include="Resources\icon_about%403x.png" />
-    <BundleResource Include="Resources\xamarin_logo.png" />
-    <BundleResource Include="Resources\xamarin_logo%402x.png" />
-    <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
@@ -168,20 +165,5 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\icon_wheat%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\sunflowerCornWheat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\sunflowerCornWheat%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\sunflowerCornWheat%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Franzen.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ND2.jpg" />
   </ItemGroup>
 </Project>
