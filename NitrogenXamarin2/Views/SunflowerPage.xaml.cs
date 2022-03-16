@@ -11,15 +11,22 @@ namespace NitrogenXamarin2.Views
         public SunflowerPage()
         {
             InitializeComponent();
+            InitalizeSomeUI();
+            TillageDefinitionPopup();
+        }
 
-            sfPricePicker.SelectedIndex = 0;
-            CommonFunctions.SetNitrogenCostPicker(sfNitrogenCostPicker);
+        private void InitalizeSomeUI()
+        {
+            sfPricePicker.SelectedIndex = 9;
+            CommonFunctions.SetNitrogenCostPicker(sfNitrogenCostPicker, 4);
             CommonFunctions.SetPreviousCropPicker(sfPreviousCropPicker);
+        }
 
+        private void TillageDefinitionPopup()
+        {
             CommonFunctions.OnLabelTapped("Conventional Tillage", ConvDef, "Tillage greater than 2-inch depth. Thin ammonia shank or strip-till shank does not contribute to conventional till.");
             CommonFunctions.OnLabelTapped("Minimal No-till", MinDef, "No till less than 6 consecutive years; also called short-term no-till.");
             CommonFunctions.OnLabelTapped("Long-term No-till", LongDef, "No till for at least 6 consecutive years.");
-
         }
 
         // 
@@ -106,20 +113,6 @@ namespace NitrogenXamarin2.Views
             return x;
         }
 
-        // 
-        private int GetSunflowerFinalResult()
-        {
-            int sfPI = sfPricePicker.SelectedIndex;
-            int NPI = sfNitrogenCostPicker.SelectedIndex;
-            int bv = GetBaseValue(sfPI, NPI);
-            int sfCropCredit = CommonFunctions.GetPreviousCropCredit(sfPreviousCropPicker);
-            double x = Convert.ToDouble(soilTestNEntry.Text);
-            int tn = (int)Math.Round(x);
-            double y = Convert.ToDouble(soilOrganicMatterEntry.Text);
-            int om = (int)Math.Round(y);
-            return CommonFunctions.GetFinalResult(bv, sfCropCredit, tn, om);
-        }
-
         private void CalculateBtn_Clicked(object sender, EventArgs e)
         {
             if (CommonFunctions.IsEntryTextValid(soilTestNEntry, "TN") && CommonFunctions.IsEntryTextValid(soilOrganicMatterEntry, "OM"))
@@ -127,7 +120,10 @@ namespace NitrogenXamarin2.Views
                 //await DisplayAlert("N Recommendation After Credits", "" + GetSunflowerFinalResult() + "        " + "± 20  lbs/acre", "OK");
                 CalculateBtn.IsVisible = false; 
                 ResultStack.IsVisible = true;
-                ResultLabel.Text = "" + GetSunflowerFinalResult() + "    ± 20  lbs/acre";
+                int cropPriceIndex = sfPricePicker.SelectedIndex;
+                int nitrogenPriceIndex = sfNitrogenCostPicker.SelectedIndex;
+                int baseValue = GetBaseValue(cropPriceIndex, nitrogenPriceIndex);
+                ResultLabel.Text = "" + CommonFunctions.GetSpecificFinalResult(baseValue, sfPreviousCropPicker, soilTestNEntry, soilOrganicMatterEntry) + "    ± 20  lbs/acre";
             }
             else
             {

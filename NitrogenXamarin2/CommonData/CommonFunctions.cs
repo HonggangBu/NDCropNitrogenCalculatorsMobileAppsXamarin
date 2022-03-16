@@ -36,7 +36,7 @@ namespace NitrogenXamarin2.CommonData
             //tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
             tapGestureRecognizer.Tapped += async (s, e) =>
             {
-                await Application.Current.MainPage.DisplayAlert(title, text, "OK");
+                await Application.Current.MainPage.DisplayAlert(title, text, "Got it");
             };
             label.GestureRecognizers.Add(tapGestureRecognizer);
         }
@@ -82,7 +82,7 @@ namespace NitrogenXamarin2.CommonData
         }
 
 
-        public static void SetNitrogenCostPicker(Picker nitrogenPicker)
+        public static void SetNitrogenCostPicker(Picker nitrogenPicker, int selectedIndex)
         {
             double startValue = 0.2, commonDifference = 0.1, NumValues = 19;
             List<double> costList = new List<double>();
@@ -91,7 +91,18 @@ namespace NitrogenXamarin2.CommonData
                 costList.Add(startValue + i * commonDifference);
             }
             nitrogenPicker.ItemsSource = costList;
-            nitrogenPicker.SelectedIndex = 0;
+            nitrogenPicker.SelectedIndex = selectedIndex;
+        }
+
+        public static void SetCropPricePicker(Picker cropPricePicker, int selectedIndex, int startValue, int totalNumber, int commonDifference)
+        {
+            List<int> priceList = new List<int>();
+            for (int i = 0; i < totalNumber; i++)
+            {
+                priceList.Add(startValue + i * commonDifference);
+            }
+            cropPricePicker.ItemsSource = priceList;
+            cropPricePicker.SelectedIndex = selectedIndex;
         }
 
 
@@ -137,8 +148,35 @@ namespace NitrogenXamarin2.CommonData
             return isValid;
         }
 
+        public static int GetSoilTestNitrateCredit(Entry SoilTestNitrateEntry)
+        {
+            double x = Convert.ToDouble(SoilTestNitrateEntry.Text);
+            return (int)Math.Round(x);
+        }
+
+        public static int GetSoilOrganicMatterCredit(Entry OrganicMatterEntry)
+        {
+            double y = Convert.ToDouble(OrganicMatterEntry.Text) - 5;
+            y = y > 0 ? y : 0;
+            return (int)Math.Round(y * 50.0);
+        }
+
+        
+
+
+        public static int GetSpecificFinalResult(int baseValue, Picker PrevCropPicker, Entry NitrateEntry, Entry OrganicMatterEntry)
+        {
+            //int cropPriceIndex = CropPricePicker.SelectedIndex;
+            //int nitrogenPriceIndex = NItrogenPricePicker.SelectedIndex;
+            //int baseValue = GetBaseValue(cropPriceIndex, nitrogenPriceIndex);
+            int previousCropCredit = GetPreviousCropCredit(PrevCropPicker);
+            int nitrateCredit = GetSoilTestNitrateCredit(NitrateEntry);
+            int organicMatterCredit = GetSoilOrganicMatterCredit(OrganicMatterEntry);
+            return GeneralFinalResult(baseValue, previousCropCredit, nitrateCredit, organicMatterCredit);
+        }
+
         // Get the final recommendation (after credit) result
-        public static int GetFinalResult(int baseValue, int prevCropNCredit, int soilTestNCredit, int soilOrganicMatterNCredit)
+        public static int GeneralFinalResult(int baseValue, int prevCropNCredit, int soilTestNCredit, int soilOrganicMatterNCredit)
         {
             int x = baseValue - prevCropNCredit - soilTestNCredit - soilOrganicMatterNCredit;
             return x > 0 ? x : 0;

@@ -2,13 +2,110 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NitrogenXamarin2.Views.WheatPage"
+             xmlns:local="clr-namespace:NitrogenXamarin2"
              Title="Wheat &amp; Durum Nitrogen Calculator">
-    
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="wheat"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+    <ScrollView>
+        <StackLayout Style="{StaticResource PageBackgroundColor}">
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5" RadioButtonGroup.GroupName="RegionRBtn">
+                    <StackLayout>
+                        <Image Source="{local:ImageResource NitrogenXamarin2.Images.ND_ThreeRegion.png}" HeightRequest="240"/>
+                    </StackLayout>
+                    <Label FontSize="Medium" Text="Select your region based on the above map:"/>
+                    <RadioButton x:Name="westRBtn" Content="Western ND" CheckedChanged="RegionRBtn_CheckedChanged" IsChecked="True" />
+                    <RadioButton x:Name="eastRBtn" Content="Eastern ND" CheckedChanged="RegionRBtn_CheckedChanged"/>
+                    <RadioButton x:Name="langdonRBtn" Content="Langdon Area" CheckedChanged="RegionRBtn_CheckedChanged"/>
+                </StackLayout>
+            </Frame>
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5" RadioButtonGroup.GroupName="ProductivityRBtn">
+                    <Label FontSize="Medium" Text="Select your historical productivity:"/>
+                    <StackLayout Orientation="Horizontal">
+                        <RadioButton x:Name="HighProductivityRBtn" Content="High" CheckedChanged="ProductivityRBtn_CheckedChanged"  IsChecked="True"/>
+                        <Label x:Name="HighDef">[Definition]</Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <RadioButton x:Name="MediumProductivityRBtn" Content="Medium" CheckedChanged="ProductivityRBtn_CheckedChanged"/>
+                        <Label x:Name="MediumDef">[Definition]</Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <RadioButton x:Name="LowProductivityRBtn" Content="Low" CheckedChanged="ProductivityRBtn_CheckedChanged"/>
+                        <Label x:Name="LowDef">[Definition]</Label>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5" RadioButtonGroup.GroupName="TillageRBtn">
+                    <Label FontSize="Medium" Text="Select your tillage type:"/>
+                    <StackLayout Orientation="Horizontal">
+                        <RadioButton x:Name="ConventionalTillRBtn" Content="Conventional Tillage" CheckedChanged="TillageRBtn_CheckedChanged" IsChecked="True"/>
+                        <Label x:Name="ConvDef">[Definition]</Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <RadioButton x:Name="MinNotillRBtn" Content="Minimal No-till" CheckedChanged="TillageRBtn_CheckedChanged"/>
+                        <Label x:Name="MinDef">[Definition]</Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <RadioButton x:Name="LongtermNotillRBtn" Content="Long-term No-till" CheckedChanged="TillageRBtn_CheckedChanged"/>
+                        <Label x:Name="LongDef">[Definition]</Label>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5">
+                    <Label FontSize="Medium">Tap the item below to select the closest wheat/durum price ($/bushel)</Label>
+                    <Picker x:Name="WheatPricePicker" 
+                     SelectedIndexChanged="WheatPricePicker_SelectedIndexChanged"
+                     Title="Select the closest wheat/durum price ($/bushel)"
+                     Style="{StaticResource PickerStyle}"/>
+                </StackLayout>
+            </Frame>
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5">
+                    <Label FontSize="Medium">Tap the item below to select the closest nitrogen cost ($/lb)</Label>
+                    <Picker x:Name="WheatNitrogenCostPicker"
+                            SelectedIndexChanged="WheatNitrogenCostPicker_SelectedIndexChanged"
+                    Title="select the closest nitrogen cost ($/lb)"
+                    Style="{StaticResource PickerStyle}"/>
+                </StackLayout>
+            </Frame>
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5">
+                    <Label FontSize="Medium">Tap the item below to select the previous crops planted</Label>
+                    <Picker x:Name="WheatPreviousCropPicker"
+                            SelectedIndexChanged="WheatPreviousCropPicker_SelectedIndexChanged"
+                    Title="select the previous crops planted"
+                    Style="{StaticResource PickerStyle}"/>
+                </StackLayout>
+            </Frame>
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5">
+                    <Label FontSize="Medium">Enter the nitrate-N result of the 2-ft depth soil test (lbs/acre): a nonnegative value</Label>
+                    <Entry x:Name="soilTestNEntry" 
+                           Placeholder="Enter a nonnegative value here" 
+                           Style="{StaticResource EntryStyle}"
+                           TextChanged="SoilTestNEntry_TextChanged"/>
+                </StackLayout>
+            </Frame>
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5">
+                    <Label FontSize="Medium">Enter the percent organic matter in soil (%): a value between 0 and 100</Label>
+                    <Entry x:Name="soilOrganicMatterEntry" 
+                           Placeholder="Enter a value between 0 and 100" 
+                           Style="{StaticResource EntryStyle}"
+                           TextChanged="SoilOrganicMatterEntry_TextChanged"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout x:Name="ResultStack" Style="{StaticResource ResultStackStyle}">
+                <Label Style="{StaticResource ResultTitleLabelStyle}"/>
+                <Label x:Name="ResultLabel" Style="{StaticResource ResultLabelStyle}"/>
+            </StackLayout>
+            <Label/>
+
+            <Button x:Name="CalculateBtn" Style="{StaticResource CalculateBtnStyle}" Clicked="CalculateBtn_Clicked"/>
+            <Label/>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
+    
 </ContentPage>

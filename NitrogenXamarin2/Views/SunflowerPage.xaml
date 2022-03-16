@@ -3,16 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:NitrogenXamarin2"
              x:Class="NitrogenXamarin2.Views.SunflowerPage"
-             Title="Sunflower Nitrogen Calculator"
-             xmlns:expandable="clr-namespace:Expandable;assembly=ExpandableView">
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Color x:Key="Accent">#96d1ff</Color>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+             Title="Sunflower Nitrogen Calculator">
 
     <ScrollView>
+        
         <StackLayout Style="{StaticResource PageBackgroundColor}">
             <Frame Style="{StaticResource FrameStyle}">
                 <StackLayout Padding="5" RadioButtonGroup.GroupName="RegionRBtn">
