@@ -2,13 +2,53 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NitrogenXamarin2.Views.CornPage"
+             xmlns:local="clr-namespace:NitrogenXamarin2"
              Title="Corn Nitrogen Calculator">
-    
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="corn"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+    <ScrollView Style="{StaticResource ScrollviewStyle}">
+        <StackLayout Style="{StaticResource PageBackgroundColor}">
+            <Frame Style="{StaticResource FrameStyle}">
+                <StackLayout Padding="5" RadioButtonGroup.GroupName="RegionRBtn">
+                    <StackLayout>
+                        <Image Source="{local:ImageResource NitrogenXamarin2.Images.ND.jpg}" HeightRequest="240"/>
+                    </StackLayout>
+                    <Label FontSize="Medium" Text="Select your region based on the above map:"/>
+                    <RadioButton x:Name="westRBtn" Content="Western ND" CheckedChanged="RegionRBtn_CheckedChanged" IsChecked="True" />
+                    <RadioButton x:Name="eastRBtn" Content="Eastern ND" CheckedChanged="RegionRBtn_CheckedChanged"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame Style="{StaticResource FrameStyle}" IsVisible="true" x:Name="IrrigationTillageFrame">
+                <StackLayout Padding="5" RadioButtonGroup.GroupName="IrrigationTillageRBtn">
+                    <Label FontSize="Medium" Text="Select your irrigation and tillage type:"/>
+                    <StackLayout>
+                        <RadioButton x:Name="IrrigatedRBtn" Content="Irrigated" CheckedChanged="IrrigationTillageRBtn_CheckedChanged"  IsChecked="True"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <RadioButton x:Name="LongNotillRBtn" Content="Non-irrigated and long-term no-till" CheckedChanged="IrrigationTillageRBtn_CheckedChanged"/>
+                        <Label x:Name="LongDef" HorizontalOptions="End" Margin="0,-12, 0, 0">[Definition]</Label>
+                    </StackLayout>
+                    <StackLayout>
+                        <RadioButton x:Name="ConvTillRBtn" Content="Non-irrigated and conventional tillage" CheckedChanged="IrrigationTillageRBtn_CheckedChanged"/>
+                        <Label x:Name="ConvDef" HorizontalOptions="End" Margin="0,-12, 0, 0">[Definition]</Label>
+                    </StackLayout>
+                    <StackLayout>
+                        <RadioButton x:Name="MinimalNotillRBtn" Content="Non-irrigated and minimal no-till" CheckedChanged="IrrigationTillageRBtn_CheckedChanged"/>
+                        <Label x:Name="MinDef" HorizontalOptions="End" Margin="0,-12, 0, 0">[Definition]</Label>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Frame Style="{StaticResource FrameStyle}" IsVisible="true" x:Name="TextureYieldFrame">
+                <StackLayout Padding="5" RadioButtonGroup.GroupName="TextureYieldRBtn">
+                    <Label FontSize="Medium" Text="Select your soil texture and historical yield:"/>
+                    <RadioButton x:Name="HighClayHighYieldRBtn" Content="high-clay soils with historic yield no less than 160 bushel/acre" CheckedChanged="TextureYieldRBtn_CheckedChanged"  IsChecked="True"/>
+                    <RadioButton x:Name="HighClayLowYieldRBtn" Content="high-clay soils with historic yield less than 160 bushel/acre" CheckedChanged="TextureYieldRBtn_CheckedChanged"/>
+                    <RadioButton x:Name="MediumTextureHighYieldRBtn" Content="medium-texture soils with historic yield no less than 160 bushel/acre" CheckedChanged="TextureYieldRBtn_CheckedChanged"/>
+                    <RadioButton x:Name="MediumTextureLowYieldRBtn" Content="medium-texture soils with historic yield less than 160 bushel/acre" CheckedChanged="TextureYieldRBtn_CheckedChanged"/>
+                </StackLayout>
+            </Frame>
+
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>

@@ -7,6 +7,10 @@
     -->
     <Application.Resources>
         <ResourceDictionary>
+            <Style x:Key="ScrollviewStyle" TargetType="ScrollView">
+                <Setter Property="Padding" Value="2"/>
+                <Setter Property="Margin" Value="0,5"/>
+            </Style>
             <Style x:Key="CalculateBtnStyle" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="DarkGoldenrod"/>
                 <Setter Property="VerticalOptions" Value="Center"/>

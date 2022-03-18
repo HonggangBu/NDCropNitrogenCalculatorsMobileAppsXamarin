@@ -156,9 +156,19 @@ namespace NitrogenXamarin2.CommonData
 
         public static int GetSoilOrganicMatterCredit(Entry OrganicMatterEntry)
         {
-            double y = Convert.ToDouble(OrganicMatterEntry.Text) - 5;
-            y = y > 0 ? y : 0;
-            return (int)Math.Round(y * 50.0);
+            int credit = 0;
+            double lowThreshold = 6.0;
+            double highThrehold = 7.0;
+            double y = Convert.ToDouble(OrganicMatterEntry.Text);
+            if (y>=lowThreshold && y < highThrehold)
+            {
+                credit += 50;
+            }
+            if (y >= highThrehold)
+            {
+                credit += 100;
+            }
+            return credit;
         }
 
         
@@ -166,9 +176,6 @@ namespace NitrogenXamarin2.CommonData
 
         public static int GetSpecificFinalResult(int baseValue, Picker PrevCropPicker, Entry NitrateEntry, Entry OrganicMatterEntry)
         {
-            //int cropPriceIndex = CropPricePicker.SelectedIndex;
-            //int nitrogenPriceIndex = NItrogenPricePicker.SelectedIndex;
-            //int baseValue = GetBaseValue(cropPriceIndex, nitrogenPriceIndex);
             int previousCropCredit = GetPreviousCropCredit(PrevCropPicker);
             int nitrateCredit = GetSoilTestNitrateCredit(NitrateEntry);
             int organicMatterCredit = GetSoilOrganicMatterCredit(OrganicMatterEntry);

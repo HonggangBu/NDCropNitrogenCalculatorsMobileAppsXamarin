@@ -37,7 +37,7 @@ namespace NitrogenXamarin2.Views
             else
                 return "C";
         }
-
+        
         // 
         private string GetSelectionString()
         {

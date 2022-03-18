@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:NitrogenXamarin2"
              Title="Wheat &amp; Durum Nitrogen Calculator">
 
-    <ScrollView>
+    <ScrollView Style="{StaticResource ScrollviewStyle}">
         <StackLayout Style="{StaticResource PageBackgroundColor}">
             <Frame Style="{StaticResource FrameStyle}">
                 <StackLayout Padding="5" RadioButtonGroup.GroupName="RegionRBtn">
@@ -90,9 +90,9 @@
             </Frame>
             <Frame Style="{StaticResource FrameStyle}">
                 <StackLayout Padding="5">
-                    <Label FontSize="Medium">Enter the percent organic matter in soil (%): a value between 0 and 100</Label>
+                    <Label FontSize="Medium">Enter the percent organic matter in soil (%): a value between 0 and 8</Label>
                     <Entry x:Name="soilOrganicMatterEntry" 
-                           Placeholder="Enter a value between 0 and 100" 
+                           Placeholder="Enter a value between 0 and 8" 
                            Style="{StaticResource EntryStyle}"
                            TextChanged="SoilOrganicMatterEntry_TextChanged"/>
                 </StackLayout>
