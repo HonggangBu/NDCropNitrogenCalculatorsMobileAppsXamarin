@@ -41,6 +41,25 @@ namespace NitrogenXamarin2.CommonData
             label.GestureRecognizers.Add(tapGestureRecognizer);
         }
 
+        public static string GetRegion(RadioButton westND, RadioButton eastND, RadioButton langdonArea, RadioButton CentralArea)
+        {
+            if (westND.IsChecked)
+            {
+                return "W";
+            }
+            else if (eastND.IsChecked)
+            {
+                return "E";
+            }
+            else if (langdonArea.IsChecked)
+            {
+                return "L";
+            }
+            else
+            {
+                return "C";
+            }
+        }
 
         public static string GetRegion(RadioButton westND, RadioButton eastND, RadioButton langdonArea)
         {
@@ -109,15 +128,15 @@ namespace NitrogenXamarin2.CommonData
         public static void SetPreviousCropPicker(Picker previousCropPicker)
         {
             List<string> cropList = new List<string>();
-            cropList.Add("no nitrogen-supplying crop");
-            cropList.Add("Soybean, Dry Bean, Field Pea, Lentil, Chickpea, or harvested Sweet Clover");
-            cropList.Add("sugarbeet with yellow leaves at harvest");
-            cropList.Add("sugarbeet with yellow-green leaves at harvest");
-            cropList.Add("sugarbeet with dark-green leaves at harvest");
-            cropList.Add("harvested alfalfa or unharvested sweet clover (5+ plants per sqft)");
-            cropList.Add("harvested alfalfa or unharvested sweet clover (3-4 plants per sqft)");
-            cropList.Add("harvested alfalfa or unharvested sweet clover (1-2 plants per sqft)");
-            cropList.Add("harvested alfalfa or unharvested sweet clover (less than 1 plants per sqft)");
+            cropList.Add("*no nitrogen-supplying crop");
+            cropList.Add("*Soybean, Dry Bean, Field Pea, Lentil, Chickpea, or harvested Sweet Clover");
+            cropList.Add("*sugarbeet with yellow leaves at harvest");
+            cropList.Add("*sugarbeet with yellow-green leaves at harvest");
+            cropList.Add("*sugarbeet with dark-green leaves at harvest");
+            cropList.Add("*harvested alfalfa or unharvested sweet clover (5+ plants per sqft)");
+            cropList.Add("*harvested alfalfa or unharvested sweet clover (3-4 plants per sqft)");
+            cropList.Add("*harvested alfalfa or unharvested sweet clover (1-2 plants per sqft)");
+            cropList.Add("*harvested alfalfa or unharvested sweet clover (less than 1 plants per sqft)");
             previousCropPicker.ItemsSource = cropList;
             previousCropPicker.SelectedIndex = 0;
         }

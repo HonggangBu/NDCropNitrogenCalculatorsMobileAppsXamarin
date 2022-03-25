@@ -7,46 +7,76 @@
     -->
     <Application.Resources>
         <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="Small"/>
+            </Style>
+            <Style TargetType="RadioButton">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+            <Style TargetType="Picker">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="TillageDefinitionLabel" TargetType="Label">
+                <Setter Property="Text" Value=" Info"/>
+                <Setter Property="FontAttributes" Value="Italic"/>
+                <Setter Property="TextColor" Value="DarkOliveGreen"/>
+            </Style>
+            <Style x:Key="NoteLabelStyle" TargetType="Label">
+                <Setter Property="Text" Value="Please scroll down to the end to select or input a value for each field."/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="LightYellow"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Micro"/>
+                <Setter Property="Padding" Value="5,5"/>
+            </Style>
             <Style x:Key="ScrollviewStyle" TargetType="ScrollView">
                 <Setter Property="Padding" Value="2"/>
                 <Setter Property="Margin" Value="0,5"/>
             </Style>
             <Style x:Key="CalculateBtnStyle" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="DarkGoldenrod"/>
+                <Setter Property="BackgroundColor" Value="DarkSlateBlue"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="Text" Value="CALCULATE"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
-                <Setter Property="IsEnabled" Value="True"/>
-                <Setter Property="IsVisible" Value="True"/>
+                <Setter Property="TextColor" Value="White"/>
             </Style>
             <Style x:Key="ResultStackStyle" TargetType="StackLayout">
                 <Setter Property="IsVisible" Value="false"/>
-                <Setter Property="Padding" Value="1,2,1,10"/>
-                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
-                <Setter Property="BackgroundColor" Value="DarkGreen"/>
+                <Setter Property="Padding" Value="1,2,1,2"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="BackgroundColor" Value="DarkSlateBlue"/>
             </Style>
             <Style x:Key="ResultTitleLabelStyle" TargetType="Label">
                 <Setter Property="Text" Value="N Recommendation After Credits"/>
-                <Setter Property="FontSize" Value="Medium"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
                 <Setter Property="Padding" Value="2"/>
                 <Setter Property="TextColor" Value="White"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
             </Style>
             <Style x:Key="ResultLabelStyle" TargetType="Label">
-                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="FontSize" Value="Medium"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
-                <Setter Property="Margin" Value="0,5,0,10"/>
+                <Setter Property="Margin" Value="0,2,0,2"/>
                 <Setter Property="TextColor" Value="White"/>
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
                 <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
             </Style>
             <Style x:Key="PageBackgroundColor" TargetType="ContentPage">
-                <Setter Property="BackgroundColor" Value="Azure"/>
+                <Setter Property="BackgroundColor" Value="MintCream"/>
             </Style>
             <Style x:Key="FrameStyle" TargetType="Frame">
                 <Setter Property="CornerRadius" Value="15"/>
                 <Setter Property="OutlineColor" Value="DarkOrange"/>
-                <Setter Property="BackgroundColor" Value="Azure"/>
+                <Setter Property="BackgroundColor" Value="MintCream"/>
             </Style>
             <Style x:Key="PickerStyle" TargetType="Picker">
                 <Setter Property="TitleColor" Value="DarkSlateBlue"/>
@@ -58,7 +88,7 @@
                 <Setter Property="Keyboard" Value="Numeric"/>
             </Style>
             <Color x:Key="Primary">#2196F3</Color>
-            <Style TargetType="Button">
+            <!--<Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"/>
                 <Setter Property="FontSize" Value="Medium"/>
@@ -78,7 +108,7 @@
                         </VisualStateGroup>
                     </VisualStateGroupList>
                 </Setter>
-            </Style>
+            </Style>-->
         </ResourceDictionary>        
     </Application.Resources>
 </Application>

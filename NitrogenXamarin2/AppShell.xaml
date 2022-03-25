@@ -30,10 +30,10 @@
     </Shell.Resources>
 
     <TabBar>
-        <ShellContent Title="SUNFLOWER" Icon="icon_sunflower.png" Route="SunflowerPage" ContentTemplate="{DataTemplate local:SunflowerPage}" />
-        <ShellContent Title="WHEAT" Icon="icon_wheat.png" ContentTemplate="{DataTemplate local:WheatPage}" />
-        <ShellContent Title="CORN" Icon="icon_corn.png" ContentTemplate="{DataTemplate local:CornPage}" />
-        <ShellContent Title="ABOUT" Icon="icon_about.png" ContentTemplate="{DataTemplate local:AboutPage}" />
+        <ShellContent Title="Sunflower" Icon="icon_sunflower.png" Route="SunflowerPage" ContentTemplate="{DataTemplate local:SunflowerPage}" />
+        <ShellContent Title="Wheat" Icon="icon_wheat.png" ContentTemplate="{DataTemplate local:WheatPage}" />
+        <ShellContent Title="Corn" Icon="icon_corn.png" ContentTemplate="{DataTemplate local:CornPage}" />
+        <ShellContent Title="About" Icon="icon_about.png" ContentTemplate="{DataTemplate local:AboutPage}" />
     </TabBar>
 
 </Shell>

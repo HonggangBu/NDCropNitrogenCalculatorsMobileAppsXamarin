@@ -4,46 +4,47 @@
              xmlns:expandable="clr-namespace:Expandable;assembly=ExpandableView"
              xmlns:local="clr-namespace:NitrogenXamarin2"
              x:Class="NitrogenXamarin2.Views.AboutPage"
-             Title="About">
+             Title="ABOUT">
 
 
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="CollapsibleLabelStyle" TargetType="Label">
-                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="FontSize" Value="Medium" />
                 <Setter Property="FontAttributes" Value="Bold" />
-                <Setter Property="Margin" Value="10" />
+                <Setter Property="Margin" Value="3" />
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="BackgroundColor" Value="DarkOliveGreen" />
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
             </Style>
             <Style x:Key="ContentLabelStyle" TargetType="Label">
-                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontSize" Value="Small"/>
             </Style>
-            <Style x:Key="NoteLabelStyle" TargetType="Label">
-                <Setter Property="FontSize" Value="Medium"/>
+            <Style x:Key="NoteLabelStyle2" TargetType="Label">
+                <Setter Property="FontSize" Value="Small"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
                 <Setter Property="TextColor" Value="White"/>
                 <Setter Property="BackgroundColor" Value="DarkBlue"/>
-                <Setter Property="Padding" Value="10,10"/>
+                <Setter Property="Margin" Value="30,0"/>
+            </Style>
+            <Style x:Key="DocBtnStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="DarkBlue"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid Style="{StaticResource PageBackgroundColor}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        
-        <StackLayout Padding="5">
-            <Image Source="{local:ImageResource NitrogenXamarin2.Images.sunflowerCornWheat.png}" HeightRequest="150"/>
+    <StackLayout>
+        <StackLayout Padding="1">
+            <Image Source="{local:ImageResource NitrogenXamarin2.Images.sunflowerCornWheat.png}" HeightRequest="120"/>
         </StackLayout>
-        
-        <ScrollView Grid.Row="1">
+        <ScrollView >
             <StackLayout Orientation="Vertical" Padding="20,5,20,10" Spacing="10">
-                <Label>Click a button to expand or collapse the corresponding content.</Label>
+                <Label FontAttributes="Bold" FontSize="Micro">Tap a button below to expand or collapse the corresponding content.</Label>
+
                 <expandable:ExpandableView>
                     <expandable:ExpandableView.PrimaryView>
                         <Label Style="{StaticResource CollapsibleLabelStyle}">
@@ -95,10 +96,10 @@
                     </expandable:ExpandableView.PrimaryView>
                     <expandable:ExpandableView.SecondaryViewTemplate>
                         <DataTemplate>
-                            <StackLayout HorizontalOptions="Center">
+                            <StackLayout HorizontalOptions="FillAndExpand">
                                 <expandable:ExpandableView>
                                     <expandable:ExpandableView.PrimaryView>
-                                        <Label Text="Sunflower" Style="{StaticResource NoteLabelStyle}"/>
+                                        <Label Text="Sunflower" Style="{StaticResource NoteLabelStyle2}"/>
                                     </expandable:ExpandableView.PrimaryView>
                                     <expandable:ExpandableView.SecondaryView>
                                         <Label Style="{StaticResource ContentLabelStyle}">
@@ -108,7 +109,7 @@
                                 </expandable:ExpandableView>
                                 <expandable:ExpandableView>
                                     <expandable:ExpandableView.PrimaryView>
-                                        <Label Text="Wheat/Durum" Style="{StaticResource NoteLabelStyle}"/>
+                                        <Label Text="Wheat/Durum" Style="{StaticResource NoteLabelStyle2}"/>
                                     </expandable:ExpandableView.PrimaryView>
                                     <expandable:ExpandableView.SecondaryView>
                                         <Label Style="{StaticResource ContentLabelStyle}">
@@ -120,7 +121,7 @@ The final Nitrogen recommendation is the average optimal rate. Growers may choos
                                 </expandable:ExpandableView>
                                 <expandable:ExpandableView>
                                     <expandable:ExpandableView.PrimaryView>
-                                        <Label Text="Corn" Style="{StaticResource NoteLabelStyle}"/>
+                                        <Label Text="Corn" Style="{StaticResource NoteLabelStyle2}"/>
                                     </expandable:ExpandableView.PrimaryView>
                                     <expandable:ExpandableView.SecondaryView>
                                         <Label Style="{StaticResource ContentLabelStyle}">
@@ -143,16 +144,16 @@ High clay soils are subject to N loss due to denitrification in wet years. If sp
                     </expandable:ExpandableView.PrimaryView>
                     <expandable:ExpandableView.SecondaryViewTemplate>
                         <DataTemplate>
-                            <StackLayout HorizontalOptions="CenterAndExpand">
-                                <Button Text="Sunflower" BackgroundColor="DarkBlue" Clicked="SunflowerDoc_Button_Clicked"/>
-                                <Button Text="Wheat/Durum" BackgroundColor="DarkBlue" Clicked="WheatDoc_Button_Clicked"/>
-                                <Button Text="Corn" BackgroundColor="DarkBlue" Clicked="CornDoc_Button_Clicked"/>
-                                <Button Text="Maximum Return to N Approach" BackgroundColor="DarkBlue" Clicked="MaxReturnN_Button_Clicked"/>
+                            <StackLayout HorizontalOptions="Fill" Margin="30,0">
+                                <Button Text="Sunflower" Style="{StaticResource DocBtnStyle}" Clicked="SunflowerDoc_Button_Clicked"/>
+                                <Button Text="Wheat/Durum" Style="{StaticResource DocBtnStyle}" Clicked="WheatDoc_Button_Clicked"/>
+                                <Button Text="Corn" Style="{StaticResource DocBtnStyle}" Clicked="CornDoc_Button_Clicked"/>
+                                <Button Text="Maximum Return to N Approach" Style="{StaticResource DocBtnStyle}" Clicked="MaxReturnN_Button_Clicked"/>
                             </StackLayout>
                         </DataTemplate>
                     </expandable:ExpandableView.SecondaryViewTemplate>
                 </expandable:ExpandableView>
-                
+
                 <expandable:ExpandableView>
                     <expandable:ExpandableView.PrimaryView>
                         <Label Style="{StaticResource CollapsibleLabelStyle}">
@@ -161,15 +162,13 @@ High clay soils are subject to N loss due to denitrification in wet years. If sp
                     </expandable:ExpandableView.PrimaryView>
                     <expandable:ExpandableView.SecondaryViewTemplate>
                         <DataTemplate>
-                            <StackLayout HeightRequest="450">
+                            <Frame BorderColor="LightGray">
                                 <StackLayout>
-                                    <Image Source="{local:ImageResource NitrogenXamarin2.Images.Franzen.jpeg}" WidthRequest="180"/>
-                                </StackLayout>
-                                <StackLayout HorizontalOptions="Center">
-                                    <Label FontSize="Micro" FontAttributes="Italic" TextDecorations="Underline">
+                                    <!--<Image Source="{local:ImageResource NitrogenXamarin2.Images.Franzen.jpeg}" WidthRequest="150"/>-->
+                                    <Label FontSize="Medium" FontAttributes="Italic" TextDecorations="Underline" HorizontalTextAlignment="Center">
                                         <Label.FormattedText>
                                             <FormattedString>
-                                                <Span Text="https://www.ndsu.edu/snrs/people/faculty/dave_franzen/" TextColor="Blue" TextDecorations="Underline">
+                                                <Span Text="David Franzen" TextColor="Blue" TextDecorations="Underline">
                                                     <Span.GestureRecognizers>
                                                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                                                     </Span.GestureRecognizers>
@@ -177,28 +176,21 @@ High clay soils are subject to N loss due to denitrification in wet years. If sp
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
+                                    <Label FontSize="Small" FontAttributes="Bold" HorizontalTextAlignment="Center">Professor/PhD</Label>
+                                    <Label FontSize="Small" FontAttributes="Bold" HorizontalTextAlignment="Center">Extension Soil Specialist</Label>
+                                    <Label FontSize="Small" TextColor="DarkBlue" HorizontalTextAlignment="Center">Email: david.franzen@ndsu.edu</Label>
+                                    <Label FontSize="Small" TextColor="DarkBlue" HorizontalTextAlignment="Center">phone: 701-799-2565</Label>
+
+                                    <Label HorizontalTextAlignment="Center">Department of Soil Science</Label>
+                                    <Label HorizontalTextAlignment="Center">North Dakota State Univeristy</Label>
+                                    <Label HorizontalTextAlignment="Center">Fargo, ND</Label>
                                 </StackLayout>
-                                <StackLayout HorizontalOptions="Center">
-                                    <Label FontSize="Large" FontAttributes="Bold">David Franzen</Label>
-                                </StackLayout>
-                                <StackLayout HorizontalOptions="Center">
-                                    <Label FontSize="Medium" FontAttributes="Bold,Italic">Professor/PhD</Label>
-                                </StackLayout>
-                                <StackLayout HorizontalOptions="Center">
-                                    <Label FontSize="Medium" FontAttributes="Bold,Italic">Extension Soil Specialist</Label>
-                                </StackLayout>
-                                <StackLayout HorizontalOptions="Center">
-                                    <Label FontSize="Medium" TextColor="DarkBlue">Email: david.franzen@ndsu.edu</Label>
-                                </StackLayout>
-                                <StackLayout HorizontalOptions="Center">
-                                    <Label FontSize="Medium" TextColor="DarkBlue">phone: 701-799-2565</Label>
-                                </StackLayout>
-                                
-                            </StackLayout>
+                            </Frame>
                         </DataTemplate>
                     </expandable:ExpandableView.SecondaryViewTemplate>
                 </expandable:ExpandableView>
             </StackLayout>
         </ScrollView>
-    </Grid>
+    </StackLayout>
+
 </ContentPage>

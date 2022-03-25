@@ -1,9 +1,12 @@
 ﻿using System;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace NitrogenXamarin2.Views
 {
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AboutPage : ContentPage
     {
         public AboutPage()
@@ -29,19 +32,16 @@ namespace NitrogenXamarin2.Views
         private async void SunflowerDoc_Button_Clicked(object sender, EventArgs e)
         {
             await Browser.OpenAsync("https://www.ndsu.edu/fileadmin/soils.del/pdfs/SF713__Fertilizing_Sunflower.pdf", BrowserLaunchMode.SystemPreferred);
-
         }
 
         private async void CornDoc_Button_Clicked(object sender, EventArgs e)
         {
             await Browser.OpenAsync("https://www.ag.ndsu.edu/publications/crops/soil-fertility-recommendations-for-corn", BrowserLaunchMode.SystemPreferred);
-
         }
 
         private async void WheatDoc_Button_Clicked(object sender, EventArgs e)
         {
             await Browser.OpenAsync("https://www.ag.ndsu.edu/publications/crops/fertilizing-hard-red-spring-wheat-and-durum-1", BrowserLaunchMode.SystemPreferred);
-
         }
     }
 }
