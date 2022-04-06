@@ -4,7 +4,9 @@
              xmlns:expandable="clr-namespace:Expandable;assembly=ExpandableView"
              xmlns:local="clr-namespace:NitrogenXamarin2"
              x:Class="NitrogenXamarin2.Views.AboutPage"
-             Title="ABOUT">
+             Title="ABOUT"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
 
 
     <ContentPage.Resources>

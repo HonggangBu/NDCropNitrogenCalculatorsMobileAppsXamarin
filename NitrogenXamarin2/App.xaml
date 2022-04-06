@@ -53,7 +53,7 @@
                 <Setter Property="IsVisible" Value="false"/>
                 <Setter Property="Padding" Value="1,2,1,2"/>
                 <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
-                <Setter Property="BackgroundColor" Value="DarkSlateBlue"/>
+                <Setter Property="BackgroundColor" Value="DarkOrange"/>
             </Style>
             <Style x:Key="ResultTitleLabelStyle" TargetType="Label">
                 <Setter Property="Text" Value="N Recommendation After Credits"/>
@@ -88,6 +88,7 @@
                 <Setter Property="Keyboard" Value="Numeric"/>
             </Style>
             <Color x:Key="Primary">#2196F3</Color>
+            <!--<Color x:Key="Primary">#58111A</Color>-->
             <!--<Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"/>

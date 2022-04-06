@@ -16,3 +16,4 @@ C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2\obj\Debug\nets
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2\obj\Debug\netstandard2.0\NitrogenXamarin2.dll
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2\obj\Debug\netstandard2.0\ref\NitrogenXamarin2.dll
 C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2\obj\Debug\netstandard2.0\NitrogenXamarin2.pdb
+C:\Users\honggang.bu\BuProjects\NitrogenXamarin2\NitrogenXamarin2\obj\Debug\netstandard2.0\NitrogenXamarin2.csproj.AssemblyReference.cache

@@ -2,8 +2,8 @@
 	.section	.rodata.env.str.1,"aMS",@progbits,1
 	.type	.L.env.str.1, @object
 .L.env.str.1:
-	.asciz	"com.companyname.nitrogenxamarin2"
-	.size	.L.env.str.1, 33
+	.asciz	"edu.ndsu.nitrogen"
+	.size	.L.env.str.1, 18
 	.section	.data.application_config,"aw",@progbits
 	.type	application_config, @object
 	.p2align	3
@@ -72,7 +72,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",@progbits,1
 	.type	.L.env.str.8, @object
 .L.env.str.8:
-	.asciz	"88456f33-89e8-423d-bd60-055e63454398"
+	.asciz	"8ec1ec8d-739e-4873-8034-6ea78a5b0af5"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",@progbits,1
 	.type	.L.env.str.9, @object

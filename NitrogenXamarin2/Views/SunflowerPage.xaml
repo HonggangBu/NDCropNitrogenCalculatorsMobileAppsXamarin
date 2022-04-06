@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:NitrogenXamarin2"
              x:Class="NitrogenXamarin2.Views.SunflowerPage"
-             Title="SUNFLOWER">
+             Title="SUNFLOWER"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
 
     <StackLayout>
         <ScrollView Style="{StaticResource ScrollviewStyle}">
@@ -87,7 +89,7 @@
                 </Frame>
                 <Frame Style="{StaticResource FrameStyle}">
                     <StackLayout Padding="5">
-                        <Label FontSize="Small">Tap the value below to select the previous crops planted</Label>
+                        <Label FontSize="Small">Tap the item below to select the previous crops planted</Label>
                         <Picker x:Name="sfPreviousCropPicker"
                             SelectedIndexChanged="SunflowerPreviousCropPicker_SelectedIndexChanged"
                     Title="select the previous crops planted"

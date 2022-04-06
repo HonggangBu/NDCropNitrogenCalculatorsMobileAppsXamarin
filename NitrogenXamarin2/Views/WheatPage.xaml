@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NitrogenXamarin2.Views.WheatPage"
              xmlns:local="clr-namespace:NitrogenXamarin2"
-             Title="WHEAT &amp; DURUM">
+             Title="WHEAT &amp; DURUM"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
 
     <StackLayout>
         <ScrollView Style="{StaticResource ScrollviewStyle}">
@@ -74,7 +76,7 @@
                 </Frame>
                 <Frame Style="{StaticResource FrameStyle}">
                     <StackLayout Padding="5">
-                        <Label FontSize="Small">Tap the value below to select the previous crops planted</Label>
+                        <Label FontSize="Small">Tap the item below to select the previous crops planted</Label>
                         <Picker x:Name="WheatPreviousCropPicker"
                             SelectedIndexChanged="WheatPreviousCropPicker_SelectedIndexChanged"
                     Title="select the previous crops planted"
