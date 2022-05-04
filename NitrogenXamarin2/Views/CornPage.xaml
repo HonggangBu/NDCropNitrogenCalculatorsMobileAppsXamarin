@@ -22,7 +22,7 @@
                     <Frame Style="{StaticResource FrameStyle}">
                         <StackLayout Padding="5" RadioButtonGroup.GroupName="RegionRBtn">
                             <StackLayout>
-                                <Image Source="{local:ImageResource NitrogenXamarin2.Images.ND.jpg}" HeightRequest="240"/>
+                                <Image Source="{local:ImageResource NitrogenXamarin2.Images.ND4.jpg}" HeightRequest="240"/>
                             </StackLayout>
                             <Label FontSize="Small" Text="Select your region based on the above map:"/>
                             <RadioButton x:Name="EastRBtn" Content="Eastern Region" CheckedChanged="RegionRBtn_CheckedChanged" IsChecked="True"/>
