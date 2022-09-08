@@ -31,17 +31,17 @@ namespace NitrogenXamarin2.Views
 
         private async void SunflowerDoc_Button_Clicked(object sender, EventArgs e)
         {
-            await Browser.OpenAsync("https://www.ndsu.edu/fileadmin/soils.del/pdfs/SF713__Fertilizing_Sunflower.pdf", BrowserLaunchMode.SystemPreferred);
+            await Browser.OpenAsync("https://www.ndsu.edu/agriculture/extension/publications/fertilizing-sunflower", BrowserLaunchMode.SystemPreferred);
         }
 
         private async void CornDoc_Button_Clicked(object sender, EventArgs e)
         {
-            await Browser.OpenAsync("https://www.ag.ndsu.edu/publications/crops/soil-fertility-recommendations-for-corn", BrowserLaunchMode.SystemPreferred);
+            await Browser.OpenAsync("https://www.ndsu.edu/agriculture/extension/publications/soil-fertility-recommendations-corn", BrowserLaunchMode.SystemPreferred);
         }
 
         private async void WheatDoc_Button_Clicked(object sender, EventArgs e)
         {
-            await Browser.OpenAsync("https://www.ag.ndsu.edu/publications/crops/fertilizing-hard-red-spring-wheat-and-durum-1", BrowserLaunchMode.SystemPreferred);
+            await Browser.OpenAsync("https://www.ndsu.edu/agriculture/extension/publications/fertilizing-hard-red-spring-wheat-and-durum", BrowserLaunchMode.SystemPreferred);
         }
     }
 }
