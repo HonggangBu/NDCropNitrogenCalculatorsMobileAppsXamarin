@@ -62,16 +62,16 @@ namespace NitrogenXamarin2.Views {
         private global::Xamarin.Forms.Frame TextureRiskFrame;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.RadioButton MediumTextureRBtn;
+        private global::Xamarin.Forms.RadioButton MediumTextureLowRiskRBtn;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.RadioButton MediumTextureHighRiskRBtn;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.RadioButton HighClayLowRiskRBtn;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.RadioButton HighClayHighRiskRBtn;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.RadioButton MediumLeachingRiskRBtn;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Picker CornPricePicker;
@@ -115,10 +115,10 @@ namespace NitrogenXamarin2.Views {
             LongNotillRBtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.RadioButton>(this, "LongNotillRBtn");
             LongDef = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "LongDef");
             TextureRiskFrame = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Frame>(this, "TextureRiskFrame");
-            MediumTextureRBtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.RadioButton>(this, "MediumTextureRBtn");
+            MediumTextureLowRiskRBtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.RadioButton>(this, "MediumTextureLowRiskRBtn");
+            MediumTextureHighRiskRBtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.RadioButton>(this, "MediumTextureHighRiskRBtn");
             HighClayLowRiskRBtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.RadioButton>(this, "HighClayLowRiskRBtn");
             HighClayHighRiskRBtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.RadioButton>(this, "HighClayHighRiskRBtn");
-            MediumLeachingRiskRBtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.RadioButton>(this, "MediumLeachingRiskRBtn");
             CornPricePicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "CornPricePicker");
             CornNitrogenCostPicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "CornNitrogenCostPicker");
             CornPreviousCropPicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "CornPreviousCropPicker");

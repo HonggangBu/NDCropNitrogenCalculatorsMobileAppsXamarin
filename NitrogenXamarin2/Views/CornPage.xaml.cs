@@ -114,9 +114,9 @@ namespace NitrogenXamarin2.Views
 
         private string GetTextureRiskType()
         {
-            if (MediumTextureRBtn.IsChecked)
+            if (MediumTextureLowRiskRBtn.IsChecked)
             {
-                return "MT";
+                return "ML";
             }
             else if (HighClayHighRiskRBtn.IsChecked)
             {
@@ -128,7 +128,7 @@ namespace NitrogenXamarin2.Views
             }
             else
             {
-                return "HM";
+                return "MH";
             }
         }
 
@@ -200,8 +200,8 @@ namespace NitrogenXamarin2.Views
                 case "EL":
                     x = CornBaseTables.eastLongNoTill[cornPriceIndex, NPriceIndex];
                     break;
-                case "ECMT":
-                    x = CornBaseTables.eastConvTillMediumTexture[cornPriceIndex, NPriceIndex];
+                case "ECML":
+                    x = CornBaseTables.eastConvTillMediumTextureLowRisk[cornPriceIndex, NPriceIndex];
                     break;
                 case "ECHH":
                     x = CornBaseTables.eastConvTillHighClayHighRisk[cornPriceIndex, NPriceIndex];
@@ -209,11 +209,11 @@ namespace NitrogenXamarin2.Views
                 case "ECHL":
                     x = CornBaseTables.eastConvTillHighClayLowRisk[cornPriceIndex, NPriceIndex];
                     break;
-                case "ECHM":
-                    x = CornBaseTables.eastConvTillMediumLeachingRisk[cornPriceIndex, NPriceIndex];
+                case "ECMH":
+                    x = CornBaseTables.eastConvTillMediumTextureHighRisk[cornPriceIndex, NPriceIndex];
                     break;
-                case "EMMT":
-                    x = CornBaseTables.eastMinNoTillMediumTexture[cornPriceIndex, NPriceIndex];
+                case "EMML":
+                    x = CornBaseTables.eastMinNoTillMediumTextureLowRisk[cornPriceIndex, NPriceIndex];
                     break;
                 case "EMHH":
                     x = CornBaseTables.eastMinNoTillHighClayHighRisk[cornPriceIndex, NPriceIndex];
@@ -221,8 +221,8 @@ namespace NitrogenXamarin2.Views
                 case "EMHL":
                     x = CornBaseTables.eastMinNoTillHighClayLowRisk[cornPriceIndex, NPriceIndex];
                     break;
-                case "EMHM":
-                    x = CornBaseTables.eastMinNoTillMediumLeachingRisk[cornPriceIndex, NPriceIndex];
+                case "EMMH":
+                    x = CornBaseTables.eastMinNoTillMediumTextureHighRisk[cornPriceIndex, NPriceIndex];
                     break;
                 default:
                     DisplayAlert("ERROR", "Something is Wrong with the selection string!", "OK");

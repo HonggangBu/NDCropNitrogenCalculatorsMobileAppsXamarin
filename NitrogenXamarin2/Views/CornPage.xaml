@@ -52,11 +52,11 @@
 
                     <Frame Style="{StaticResource FrameStyle}" x:Name="TextureRiskFrame">
                         <StackLayout Padding="5" RadioButtonGroup.GroupName="TextureRiskRBtn">
-                            <Label FontSize="Small" Text="Select your soil texture and loss risk:"/>
-                            <RadioButton x:Name="MediumTextureRBtn" Content="Medium texture" CheckedChanged="TextureRiskRBtn_CheckedChanged" IsChecked="True"/>
+                            <Label FontSize="Small" Text="Select your soil texture and early N loss risk level:"/>
+                            <RadioButton x:Name="MediumTextureLowRiskRBtn" Content="Medium-textured soils with low loss risk" CheckedChanged="TextureRiskRBtn_CheckedChanged" IsChecked="True"/>
+                            <RadioButton x:Name="MediumTextureHighRiskRBtn" Content="Medium-Textured soils with high loss risk" CheckedChanged="TextureRiskRBtn_CheckedChanged"/>
                             <RadioButton x:Name="HighClayLowRiskRBtn" Content="High-clay soils with low loss risk" CheckedChanged="TextureRiskRBtn_CheckedChanged" />
                             <RadioButton x:Name="HighClayHighRiskRBtn" Content="High-clay soils with high loss risk" CheckedChanged="TextureRiskRBtn_CheckedChanged"/>
-                            <RadioButton x:Name="MediumLeachingRiskRBtn" Content="High-clay soils with medium leaching risk" CheckedChanged="TextureRiskRBtn_CheckedChanged"/>
                         </StackLayout>
                     </Frame>
                 </StackLayout>

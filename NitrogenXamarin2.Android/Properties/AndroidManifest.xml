@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="2.0" package="edu.ndsu.nitrogen" android:installLocation="preferExternal">
-	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30" />
-	<application android:label="Nitrogen Calculator" android:theme="@style/MainTheme" android:icon="@mipmap/nitrogen"></application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="3" android:versionName="2.1" package="soil.ndsu" android:installLocation="preferExternal">
+	<uses-sdk android:minSdkVersion="24" android:targetSdkVersion="31" />
+	<application android:label="NDSU Nitrogen Calculator" android:theme="@style/MainTheme" android:icon="@mipmap/nitrogen"></application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>

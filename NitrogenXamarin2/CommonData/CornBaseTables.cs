@@ -70,7 +70,7 @@ namespace NitrogenXamarin2.CommonData
 {218, 213, 209, 204, 201, 196, 191, 187, 183, 179, 173, 169, 164, 161, 156, 151, 147, 143, 138}
 };
 
-        public static readonly int[,] eastConvTillMediumTexture = new int[nRow, nColumn]
+        public static readonly int[,] eastConvTillMediumTextureLowRisk = new int[nRow, nColumn]
             {{231, 226, 161, 126, 92, 57, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 {250, 232, 207, 184, 161, 138, 115, 92, 68, 45, 22, 0, 0, 0, 0, 0, 0, 0, 0},
 {250, 250, 232, 213, 196, 178, 161, 144, 126, 111, 92, 74, 57, 41, 22, 0, 0, 0, 0},
@@ -113,7 +113,7 @@ namespace NitrogenXamarin2.CommonData
 {150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150}
 };
 
-        public static readonly int[,] eastConvTillMediumLeachingRisk = new int[nRow, nColumn]
+        public static readonly int[,] eastConvTillMediumTextureHighRisk = new int[nRow, nColumn]
             {{150, 150, 150, 126, 92, 57, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 {150, 150, 150, 150, 150, 138, 115, 92, 68, 45, 22, 0, 0, 0, 0, 0, 0, 0, 0},
 {150, 150, 150, 150, 150, 150, 150, 144, 126, 111, 92, 74, 57, 41, 22, 0, 0, 0, 0},
@@ -150,13 +150,13 @@ namespace NitrogenXamarin2.CommonData
 
         public static readonly int[,] centralMinNoTill = CommonFunctions.GetNewTable(centralConvTill, minNotillDiff);
 
-        public static readonly int[,] eastMinNoTillMediumTexture = CommonFunctions.GetNewTable(eastConvTillMediumTexture, minNotillDiff);
+        public static readonly int[,] eastMinNoTillMediumTextureLowRisk = CommonFunctions.GetNewTable(eastConvTillMediumTextureLowRisk, minNotillDiff);
 
         public static readonly int[,] eastMinNoTillHighClayLowRisk = CommonFunctions.GetNewTable(eastConvTillHighClayLowRisk, minNotillDiff);
 
         public static readonly int[,] eastMinNoTillHighClayHighRisk = CommonFunctions.GetNewTable(eastConvTillHighClayHighRisk, minNotillDiff);
 
-        public static readonly int[,] eastMinNoTillMediumLeachingRisk = CommonFunctions.GetNewTable(eastConvTillMediumLeachingRisk, minNotillDiff);
+        public static readonly int[,] eastMinNoTillMediumTextureHighRisk = CommonFunctions.GetNewTable(eastConvTillMediumTextureHighRisk, minNotillDiff);
 
     }
 }
