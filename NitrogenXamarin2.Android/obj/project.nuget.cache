@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xdZiNIztiDLcDb+ObxXKq8Xjfm7lHQWQ0yC6w9sB+jRt1KS/mIiOl6PrjlNzF9IsuH/MjNSWQ8IG6lOgkxZ7gQ==",
+  "dgSpecHash": "A/D1+li12eOrfka3XwcD8zLHw7fy5WRxy0+Aszsm4yx3ERiQDYkjD1xH4hj+kDrbvJIQXxpiKPa1Oi82jChjJA==",
   "success": true,
-  "projectFilePath": "C:\\NitrogenXamarin2\\NitrogenXamarin2.Android\\NitrogenXamarin2.Android.csproj",
+  "projectFilePath": "C:\\visualstudioProjects\\xamarinAndroid\\NitrogenXamarin2\\NitrogenXamarin2.Android\\NitrogenXamarin2.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Honggang\\.nuget\\packages\\expandableview\\1.0.10\\expandableview.1.0.10.nupkg.sha512",
     "C:\\Users\\Honggang\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

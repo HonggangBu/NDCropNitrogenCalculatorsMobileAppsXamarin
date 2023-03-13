@@ -2377,11 +2377,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\NitrogenXamarin2\\NitrogenXamarin2.Android\\NitrogenXamarin2.Android.csproj",
+      "projectUniqueName": "C:\\visualstudioProjects\\xamarinAndroid\\NitrogenXamarin2\\NitrogenXamarin2.Android\\NitrogenXamarin2.Android.csproj",
       "projectName": "NitrogenXamarin2.Android",
-      "projectPath": "C:\\NitrogenXamarin2\\NitrogenXamarin2.Android\\NitrogenXamarin2.Android.csproj",
+      "projectPath": "C:\\visualstudioProjects\\xamarinAndroid\\NitrogenXamarin2\\NitrogenXamarin2.Android\\NitrogenXamarin2.Android.csproj",
       "packagesPath": "C:\\Users\\Honggang\\.nuget\\packages\\",
-      "outputPath": "C:\\NitrogenXamarin2\\NitrogenXamarin2.Android\\obj\\",
+      "outputPath": "C:\\visualstudioProjects\\xamarinAndroid\\NitrogenXamarin2\\NitrogenXamarin2.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2402,8 +2402,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "C:\\NitrogenXamarin2\\NitrogenXamarin2\\NitrogenXamarin2.csproj": {
-              "projectPath": "C:\\NitrogenXamarin2\\NitrogenXamarin2\\NitrogenXamarin2.csproj"
+            "C:\\visualstudioProjects\\xamarinAndroid\\NitrogenXamarin2\\NitrogenXamarin2\\NitrogenXamarin2.csproj": {
+              "projectPath": "C:\\visualstudioProjects\\xamarinAndroid\\NitrogenXamarin2\\NitrogenXamarin2\\NitrogenXamarin2.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F4pXP4lyEH3dY/Y9QxdaruPd8LSsHUtjqCNhKJEUJhhwFWbiBnxmIV+KVeEe9RcxYQBJR19AYPAKWszv90kLBA==",
+  "dgSpecHash": "8bmxWY5WUBroRl0HVbakAfh+TArPO0EB+FRbh2qdhlhwkHnq0u+zOdoaPnS+Iv1ookvE6LD+ly20MvrNwSBDwQ==",
   "success": true,
-  "projectFilePath": "C:\\NitrogenXamarin2\\NitrogenXamarin2\\NitrogenXamarin2.csproj",
+  "projectFilePath": "C:\\visualstudioProjects\\xamarinAndroid\\NitrogenXamarin2\\NitrogenXamarin2\\NitrogenXamarin2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Honggang\\.nuget\\packages\\expandableview\\1.0.10\\expandableview.1.0.10.nupkg.sha512",
     "C:\\Users\\Honggang\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
