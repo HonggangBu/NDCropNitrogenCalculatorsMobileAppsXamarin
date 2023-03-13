@@ -115,7 +115,7 @@
                                     </expandable:ExpandableView.PrimaryView>
                                     <expandable:ExpandableView.SecondaryView>
                                         <Label Style="{StaticResource ContentLabelStyle}">
-                                            Nitrogen recommendation in this app is based on an economic production function that takes into account the yield response of corn to added N, less the cost of the N.
+                                            Nitrogen recommendation in this app is based on an economic production function that takes into account the yield response of spring wheat/durum to added N, less the cost of the N.
 
 The final Nitrogen recommendation is the average optimal rate. Growers may choose to apply up to 30 lb N/acre more or less than the calculated N rates due to protein traits of a variety, special soil conditions such as susceptibility to spring denitrification, application techniques that may not be most efficient or historical experiences from the field or part of a field that may influence N uptake and efficiency. For wheat after small grains, we assume about 2,000 lb/acre of straw residue. For every 2,000 lb/acre straw greater than this, add 30 lb N/acre.
                                         </Label>
@@ -130,6 +130,20 @@ The final Nitrogen recommendation is the average optimal rate. Growers may choos
                                             Nitrogen recommendation in this app is based on an economic production function that takes into account the yield response of corn to added N, less the cost of the N.
 
 High clay soils are subject to N loss due to denitrification in wet years. If spring rainfall is normal and the soil is muddy for less than 10 days, the preplant N recommendation should be sufficient for high yield. If rains result in muddy conditions for more than 10 days, supplemental N as sidedress is strongly recommended. Estimate 1.5% nitrate-N loss per muddy day. A better recommendation is to utilize the high clay soil with yield potential greater than 160 bushels per acre active-optical sensor algorithm to direct variable-rate sidedress rates. The active-optical sensor algorithm will require the grower to establish an N-rich strip in the soil category within a variety for its use.
+                                        </Label>
+                                    </expandable:ExpandableView.SecondaryView>
+                                </expandable:ExpandableView>
+                                <expandable:ExpandableView>
+                                    <expandable:ExpandableView.PrimaryView>
+                                        <Label Text="Barley" Style="{StaticResource NoteLabelStyle2}"/>
+                                    </expandable:ExpandableView.PrimaryView>
+                                    <expandable:ExpandableView.SecondaryView>
+                                        <Label Style="{StaticResource ContentLabelStyle}">
+                                            This recommendation value is only for 2-row malting barley.
+
+Nitrogen recommendation in this app is based on an economic production function that takes into account the yield response of barley to added N, less the cost of the N.
+
+The final Nitrogen recommendation is the average optimal rate. Growers may choose to apply up to 30 lb N/acre more or less than the calculated N rates due to protein traits of a variety, special soil conditions such as susceptibility to spring denitrification, application techniques that may not be most efficient or historical experiences from the field or part of a field that may influence N uptake and efficiency.
                                         </Label>
                                     </expandable:ExpandableView.SecondaryView>
                                 </expandable:ExpandableView>
@@ -150,6 +164,7 @@ High clay soils are subject to N loss due to denitrification in wet years. If sp
                                 <Button Text="Sunflower" Style="{StaticResource DocBtnStyle}" Clicked="SunflowerDoc_Button_Clicked"/>
                                 <Button Text="Wheat/Durum" Style="{StaticResource DocBtnStyle}" Clicked="WheatDoc_Button_Clicked"/>
                                 <Button Text="Corn" Style="{StaticResource DocBtnStyle}" Clicked="CornDoc_Button_Clicked"/>
+                                <Button Text="Barley" Style="{StaticResource DocBtnStyle}" Clicked="BarleyDoc_Button_Clicked"/>
                                 <Button Text="Maximum Return to N Approach" Style="{StaticResource DocBtnStyle}" Clicked="MaxReturnN_Button_Clicked"/>
                             </StackLayout>
                         </DataTemplate>
@@ -164,30 +179,28 @@ High clay soils are subject to N loss due to denitrification in wet years. If sp
                     </expandable:ExpandableView.PrimaryView>
                     <expandable:ExpandableView.SecondaryViewTemplate>
                         <DataTemplate>
-                            <Frame BorderColor="LightGray">
-                                <StackLayout>
-                                    <!--<Image Source="{local:ImageResource NitrogenXamarin2.Images.Franzen.jpeg}" WidthRequest="150"/>-->
-                                    <Label FontSize="Medium" FontAttributes="Italic" TextDecorations="Underline" HorizontalTextAlignment="Center">
-                                        <Label.FormattedText>
-                                            <FormattedString>
-                                                <Span Text="David Franzen" TextColor="Blue" TextDecorations="Underline">
-                                                    <Span.GestureRecognizers>
-                                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
-                                                    </Span.GestureRecognizers>
-                                                </Span>
-                                            </FormattedString>
-                                        </Label.FormattedText>
-                                    </Label>
-                                    <Label FontSize="Small" FontAttributes="Bold" HorizontalTextAlignment="Center">Professor/PhD</Label>
-                                    <Label FontSize="Small" FontAttributes="Bold" HorizontalTextAlignment="Center">Extension Soil Specialist</Label>
-                                    <Label FontSize="Small" TextColor="DarkBlue" HorizontalTextAlignment="Center">Email: david.franzen@ndsu.edu</Label>
-                                    <Label FontSize="Small" TextColor="DarkBlue" HorizontalTextAlignment="Center">phone: 701-799-2565</Label>
-
-                                    <Label HorizontalTextAlignment="Center">Department of Soil Science</Label>
-                                    <Label HorizontalTextAlignment="Center">North Dakota State Univeristy</Label>
-                                    <Label HorizontalTextAlignment="Center">Fargo, ND</Label>
-                                </StackLayout>
-                            </Frame>
+                            <StackLayout BackgroundColor="LightGray">
+                                <Image Source="{local:ImageResource NitrogenXamarin2.Images.Franzen.jpeg}" WidthRequest="150"/>
+                                <Label FontSize="Medium" FontAttributes="Italic" TextDecorations="Underline" HorizontalTextAlignment="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="David Franzen" TextColor="Blue" TextDecorations="Underline">
+                                                <Span.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                                                </Span.GestureRecognizers>
+                                            </Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <Label FontSize="Small" FontAttributes="Bold" HorizontalTextAlignment="Center">Professor/PhD</Label>
+                                <Label FontSize="Small" FontAttributes="Bold" HorizontalTextAlignment="Center">Extension Soil Specialist</Label>
+                                <Label FontSize="Small" TextColor="DarkBlue" HorizontalTextAlignment="Center">Email: david.franzen@ndsu.edu</Label>
+                                <Label FontSize="Small" TextColor="DarkBlue" HorizontalTextAlignment="Center">phone: 701-799-2565</Label>
+                                <Label HorizontalTextAlignment="Center">Department of Soil Science</Label>
+                                <Label HorizontalTextAlignment="Center">North Dakota State Univeristy</Label>
+                                <Label HorizontalTextAlignment="Center">Fargo, ND</Label>
+                                <Label HeightRequest="5"></Label>
+                            </StackLayout>
                         </DataTemplate>
                     </expandable:ExpandableView.SecondaryViewTemplate>
                 </expandable:ExpandableView>

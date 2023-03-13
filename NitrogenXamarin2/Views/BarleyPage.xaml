@@ -1,10 +1,94 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="NitrogenXamarin2.Views.BarleyPage">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="This is the baley page!" />
-      </StackLayout>
-  </ContentView.Content>
-</ContentView>
+             xmlns:local="clr-namespace:NitrogenXamarin2"
+             x:Class="NitrogenXamarin2.Views.BarleyPage"
+             Title="2-ROW MALTING BARLEY">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView Style="{StaticResource ScrollviewStyle}">
+                <StackLayout Style="{StaticResource PageBackgroundColor}">
+                    <Label Style="{StaticResource NoteLabelStyle}"/>
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <StackLayout Padding="5" RadioButtonGroup.GroupName="RegionRBtn">
+                            <StackLayout>
+                                <Image Source="{local:ImageResource NitrogenXamarin2.Images.ND_ThreeRegion.png}" HeightRequest="240"/>
+                            </StackLayout>
+                            <Label FontSize="Small" Text="Select your region based on the above map:"/>
+                            <RadioButton x:Name="westRBtn" Content="Western Region" CheckedChanged="RegionRBtn_CheckedChanged" IsChecked="True" />
+                            <RadioButton x:Name="eastRBtn" Content="Eastern Region" CheckedChanged="RegionRBtn_CheckedChanged"/>
+                            <RadioButton x:Name="langdonRBtn" Content="Langdon Region" CheckedChanged="RegionRBtn_CheckedChanged"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <StackLayout Padding="5" RadioButtonGroup.GroupName="TillageRBtn">
+                            <Label FontSize="Small" Text="Select your tillage type:"/>
+                            <StackLayout Orientation="Horizontal">
+                                <RadioButton x:Name="ConventionalTillRBtn" Content="Conventional Tillage" CheckedChanged="TillageRBtn_CheckedChanged" IsChecked="True"/>
+                                <Label x:Name="ConvDef" Style="{StaticResource TillageDefinitionLabel}"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <RadioButton x:Name="LongtermNotillRBtn" Content="Long-term No-till" CheckedChanged="TillageRBtn_CheckedChanged"/>
+                                <Label x:Name="LongDef" Style="{StaticResource TillageDefinitionLabel}"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <StackLayout Padding="5">
+                            <Label FontSize="Small">Tap the value below to select the closest barley price ($/bushel)</Label>
+                            <Picker x:Name="BarleyPricePicker" 
+                     SelectedIndexChanged="BarleyPricePicker_SelectedIndexChanged"
+                     Title="Select the closest barley price ($/bushel)"
+                     Style="{StaticResource PickerStyle}"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <StackLayout Padding="5">
+                            <Label FontSize="Small">Tap the value below to select the closest nitrogen cost ($/lb)</Label>
+                            <Picker x:Name="BarleyNitrogenCostPicker"
+                            SelectedIndexChanged="BarleyNitrogenCostPicker_SelectedIndexChanged"
+                    Title="select the closest nitrogen cost ($/lb)"
+                    Style="{StaticResource PickerStyle}"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <StackLayout Padding="5">
+                            <Label FontSize="Small">Tap the item below to select the previous crops planted</Label>
+                            <Picker x:Name="BarleyPreviousCropPicker"
+                            SelectedIndexChanged="BarleyPreviousCropPicker_SelectedIndexChanged"
+                    Title="select the previous crops planted"
+                    Style="{StaticResource PickerStyle}"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <StackLayout Padding="5">
+                            <Label FontSize="Small">Enter the nitrate-N result of the 2-ft depth soil test (lbs/acre): a nonnegative value</Label>
+                            <Entry x:Name="soilTestNEntry" 
+                           Placeholder="Enter a nonnegative value here" 
+                           Style="{StaticResource EntryStyle}"
+                           TextChanged="SoilTestNEntry_TextChanged"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <StackLayout Padding="5">
+                            <Label FontSize="Small">Enter the percent organic matter in soil (%): a value between 0 and 8</Label>
+                            <Entry x:Name="soilOrganicMatterEntry" 
+                           Placeholder="Enter a value between 0 and 8" 
+                           Style="{StaticResource EntryStyle}"
+                           TextChanged="SoilOrganicMatterEntry_TextChanged"/>
+                        </StackLayout>
+                    </Frame>
+                    <Label HorizontalTextAlignment="Center">- - - - - THE END - - - - -</Label>
+                    <Label></Label>
+                </StackLayout>
+            </ScrollView>
+
+            <StackLayout x:Name="ResultStack" Style="{StaticResource ResultStackStyle}">
+                <Label Style="{StaticResource ResultTitleLabelStyle}"/>
+                <Label x:Name="ResultLabel" Style="{StaticResource ResultLabelStyle}"/>
+            </StackLayout>
+            <Button x:Name="CalculateBtn" Style="{StaticResource CalculateBtnStyle}" Clicked="CalculateBtn_Clicked"/>
+            <Label HeightRequest="0"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

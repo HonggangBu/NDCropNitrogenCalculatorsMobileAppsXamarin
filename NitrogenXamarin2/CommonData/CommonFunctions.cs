@@ -100,6 +100,10 @@ namespace NitrogenXamarin2.CommonData
             }
         }
 
+        public static string GetTillageType(RadioButton convTill, RadioButton longTermNotill)
+        {
+            return convTill.IsChecked ? "C" : "L";
+        }
 
         public static void SetNitrogenCostPicker(Picker nitrogenPicker, int selectedIndex)
         {
@@ -223,6 +227,13 @@ namespace NitrogenXamarin2.CommonData
             {
                 await Application.Current.MainPage.DisplayAlert("Input Error", "Both the soil test nitrate-nitrogen input and the soil organic matter percentage input are invalid!", "OK");
             }
+        }
+
+       public static void OnAnythingChanged(Button calculateBtn, StackLayout resultStack, Label resultLabel)
+        {
+            calculateBtn.IsVisible = true;
+            resultStack.IsVisible = false;
+            resultLabel.Text = "";
         }
     }
 }

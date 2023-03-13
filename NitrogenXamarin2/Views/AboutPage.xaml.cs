@@ -39,6 +39,11 @@ namespace NitrogenXamarin2.Views
             await Browser.OpenAsync("https://www.ndsu.edu/agriculture/extension/publications/soil-fertility-recommendations-corn", BrowserLaunchMode.SystemPreferred);
         }
 
+        private async void BarleyDoc_Button_Clicked(object sender, EventArgs e)
+        {
+            await Browser.OpenAsync("https://www.ndsu.edu/agriculture/extension/publications/fertilizing-malting-and-feed-barley", BrowserLaunchMode.SystemPreferred);
+        }
+
         private async void WheatDoc_Button_Clicked(object sender, EventArgs e)
         {
             await Browser.OpenAsync("https://www.ndsu.edu/agriculture/ag-hub/publications/fertilizing-hard-red-spring-wheat-and-durum", BrowserLaunchMode.SystemPreferred);

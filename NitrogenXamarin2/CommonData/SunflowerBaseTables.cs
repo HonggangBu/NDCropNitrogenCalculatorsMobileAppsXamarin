@@ -1,5 +1,4 @@
-﻿
-namespace NitrogenXamarin2.CommonData
+﻿namespace NitrogenXamarin2.CommonData
 {
     public static class SunflowerBaseTables
     {

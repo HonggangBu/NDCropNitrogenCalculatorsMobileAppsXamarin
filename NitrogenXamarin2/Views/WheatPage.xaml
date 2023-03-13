@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NitrogenXamarin2.Views.WheatPage"
              xmlns:local="clr-namespace:NitrogenXamarin2"
-             Title="WHEAT &amp; DURUM"
+             Title="SPRING WHEAT &amp; DURUM"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true">
 

@@ -1,7 +1,7 @@
-﻿using System;
+﻿using NitrogenXamarin2.CommonData;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using NitrogenXamarin2.CommonData;
 
 namespace NitrogenXamarin2.Views
 {
@@ -25,8 +25,8 @@ namespace NitrogenXamarin2.Views
         private void TillageDefinitionPopup()
         {
             CommonFunctions.OnLabelTapped("Conventional Tillage", ConvDef, "Tillage greater than 2-inch depth. Thin ammonia shank or strip-till shank does not contribute to conventional till.");
-            CommonFunctions.OnLabelTapped("Minimal No-till", MinDef, "No till less than 6 consecutive years; also called short-term no-till.");
-            CommonFunctions.OnLabelTapped("Long-term No-till", LongDef, "No till for at least 6 consecutive years.");
+            CommonFunctions.OnLabelTapped("Minimal No-till", MinDef, "No till equal or less than 5 consecutive years; also called short-term no-till.");
+            CommonFunctions.OnLabelTapped("Long-term No-till", LongDef, "No till for more than 5 consecutive years.");
         }
 
         // 
