@@ -29,22 +29,15 @@ namespace NitrogenXamarin2.Views
             CommonFunctions.SetPreviousCropPicker(CornPreviousCropPicker);
         }
 
-        private void OnAnythingChanged()
-        {
-            CalculateBtn.IsVisible = true;
-            ResultStack.IsVisible = false;
-            ResultLabel.Text = "";
-        }
-
         private void IrrigationRBtn_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
             IrrigationHidingStack.IsVisible = nonirrigatedRBtn.IsChecked;
         }
 
         private void RegionRBtn_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
             RegionChange();
         }
 
@@ -64,7 +57,7 @@ namespace NitrogenXamarin2.Views
 
         private void TillageRBtn_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
             TextureRiskFrameVisibility();
         }
 
@@ -84,32 +77,32 @@ namespace NitrogenXamarin2.Views
 
         private void TextureRiskRBtn_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
         }
 
         private void CornPricePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
         }
 
         private void CornNitrogenCostPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
         }
 
         private void CornPreviousCropPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
         }
 
         private void SoilTestNEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
         }
 
         private void SoilOrganicMatterEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
         }
 
         private string GetTextureRiskType()

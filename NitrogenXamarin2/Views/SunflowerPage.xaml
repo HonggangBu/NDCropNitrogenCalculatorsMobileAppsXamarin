@@ -3,128 +3,127 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:NitrogenXamarin2"
              x:Class="NitrogenXamarin2.Views.SunflowerPage"
-             Title="SUNFLOWER"
-             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-             ios:Page.UseSafeArea="true">
+             Title="SUNFLOWER">
 
-    <StackLayout>
-        <ScrollView Style="{StaticResource ScrollviewStyle}">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView Style="{StaticResource ScrollviewStyle}">
 
-            <StackLayout Style="{StaticResource PageBackgroundColor}">
-                <Label Style="{StaticResource NoteLabelStyle}"/>
-                <Frame Style="{StaticResource FrameStyle}">
-                    <StackLayout Padding="5" RadioButtonGroup.GroupName="RegionRBtn">
-                        <StackLayout>
-                            <Image Source="{local:ImageResource NitrogenXamarin2.Images.ND_ThreeRegion.png}" HeightRequest="240"/>
+                <StackLayout Style="{StaticResource PageBackgroundColor}">
+                    <Label Style="{StaticResource NoteLabelStyle}"/>
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <StackLayout Padding="5" RadioButtonGroup.GroupName="RegionRBtn">
+                            <StackLayout>
+                                <Image Source="{local:ImageResource NitrogenXamarin2.Images.ND_ThreeRegion.png}" HeightRequest="240"/>
+                            </StackLayout>
+                            <Label FontSize="Small" Text="Select your region based on the above map:"/>
+                            <RadioButton x:Name="westRBtn" Content="Western Region" CheckedChanged="RegionRBtn_CheckedChanged" IsChecked="True" />
+                            <RadioButton x:Name="eastRBtn" Content="Eastern Region" CheckedChanged="RegionRBtn_CheckedChanged"/>
+                            <RadioButton x:Name="langdonRBtn" Content="Langdon Region" CheckedChanged="RegionRBtn_CheckedChanged"/>
                         </StackLayout>
-                        <Label FontSize="Small" Text="Select your region based on the above map:"/>
-                        <RadioButton x:Name="westRBtn" Content="Western Region" CheckedChanged="RegionRBtn_CheckedChanged" IsChecked="True" />
-                        <RadioButton x:Name="eastRBtn" Content="Eastern Region" CheckedChanged="RegionRBtn_CheckedChanged"/>
-                        <RadioButton x:Name="langdonRBtn" Content="Langdon Region" CheckedChanged="RegionRBtn_CheckedChanged"/>
-                    </StackLayout>
-                </Frame>
-                <Frame Style="{StaticResource FrameStyle}">
-                    <StackLayout Padding="5" RadioButtonGroup.GroupName="TillageRBtn">
-                        <Label FontSize="Small" Text="Select your tillage type:"/>
-                        <StackLayout Orientation="Horizontal">
-                            <RadioButton x:Name="ConventionalTillRBtn" Content="Conventional Tillage" CheckedChanged="TillageRBtn_CheckedChanged" IsChecked="True"/>
-                            <Label x:Name="ConvDef" Style="{StaticResource TillageDefinitionLabel}"/>
+                    </Frame>
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <StackLayout Padding="5" RadioButtonGroup.GroupName="TillageRBtn">
+                            <Label FontSize="Small" Text="Select your tillage type:"/>
+                            <StackLayout Orientation="Horizontal">
+                                <RadioButton x:Name="ConventionalTillRBtn" Content="Conventional Tillage" CheckedChanged="TillageRBtn_CheckedChanged" IsChecked="True"/>
+                                <Label x:Name="ConvDef" Style="{StaticResource TillageDefinitionLabel}"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <RadioButton x:Name="MinNotillRBtn" Content="Minimal No-till" CheckedChanged="TillageRBtn_CheckedChanged"/>
+                                <Label x:Name="MinDef" Style="{StaticResource TillageDefinitionLabel}"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <RadioButton x:Name="LongtermNotillRBtn" Content="Long-term No-till" CheckedChanged="TillageRBtn_CheckedChanged"/>
+                                <Label x:Name="LongDef" Style="{StaticResource TillageDefinitionLabel}"/>
+                            </StackLayout>
                         </StackLayout>
-                        <StackLayout Orientation="Horizontal">
-                            <RadioButton x:Name="MinNotillRBtn" Content="Minimal No-till" CheckedChanged="TillageRBtn_CheckedChanged"/>
-                            <Label x:Name="MinDef" Style="{StaticResource TillageDefinitionLabel}"/>
+                    </Frame>
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <StackLayout Padding="5" RadioButtonGroup.GroupName="SunflowerTypeRBtn">
+                            <Label FontSize="Small" Text="Select your sunflower type:"/>
+                            <RadioButton x:Name="oilseedRBtn" Content="Oilseed" CheckedChanged="SunflowerTypeRBtn_CheckedChanged" IsChecked="True"/>
+                            <RadioButton x:Name="confectionRBtn" Content="Confection" CheckedChanged="SunflowerTypeRBtn_CheckedChanged"/>
                         </StackLayout>
-                        <StackLayout Orientation="Horizontal">
-                            <RadioButton x:Name="LongtermNotillRBtn" Content="Long-term No-till" CheckedChanged="TillageRBtn_CheckedChanged"/>
-                            <Label x:Name="LongDef" Style="{StaticResource TillageDefinitionLabel}"/>
-                        </StackLayout>
-                    </StackLayout>
-                </Frame>
-                <Frame Style="{StaticResource FrameStyle}">
-                    <StackLayout Padding="5" RadioButtonGroup.GroupName="SunflowerTypeRBtn">
-                        <Label FontSize="Small" Text="Select your sunflower type:"/>
-                        <RadioButton x:Name="oilseedRBtn" Content="Oilseed" CheckedChanged="SunflowerTypeRBtn_CheckedChanged" IsChecked="True"/>
-                        <RadioButton x:Name="confectionRBtn" Content="Confection" CheckedChanged="SunflowerTypeRBtn_CheckedChanged"/>
-                    </StackLayout>
-                </Frame>
-                <Frame Style="{StaticResource FrameStyle}">
-                    <StackLayout Padding="5">
-                        <Label FontSize="Small">Tap the value below to select the closest sunflower price ($/lb)</Label>
-                        <Picker x:Name="sfPricePicker" 
+                    </Frame>
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <StackLayout Padding="5">
+                            <Label FontSize="Small">Tap the value below to select the closest sunflower price ($/lb)</Label>
+                            <Picker x:Name="sfPricePicker" 
                      SelectedIndexChanged="SunflowerPricePicker_SelectedIndexChanged"
                      Title="Select the closest sunflower price ($/lb)"
                      Style="{StaticResource PickerStyle}">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:Double}">
-                                    <x:Double>0.09</x:Double>
-                                    <x:Double>0.12</x:Double>
-                                    <x:Double>0.15</x:Double>
-                                    <x:Double>0.18</x:Double>
-                                    <x:Double>0.21</x:Double>
-                                    <x:Double>0.24</x:Double>
-                                    <x:Double>0.27</x:Double>
-                                    <x:Double>0.30</x:Double>
-                                    <x:Double>0.33</x:Double>
-                                    <x:Double>0.36</x:Double>
-                                    <x:Double>0.39</x:Double>
-                                    <x:Double>0.42</x:Double>
-                                    <x:Double>0.45</x:Double>
-                                    <x:Double>0.48</x:Double>
-                                    <x:Double>0.51</x:Double>
-                                    <x:Double>0.55</x:Double>
-                                    <x:Double>0.60</x:Double>
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
-                    </StackLayout>
-                </Frame>
-                <Frame Style="{StaticResource FrameStyle}">
-                    <StackLayout Padding="5">
-                        <Label FontSize="Small">Tap the value below to select the closest nitrogen cost ($/lb)</Label>
-                        <Picker x:Name="sfNitrogenCostPicker"
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:Double}">
+                                        <x:Double>0.09</x:Double>
+                                        <x:Double>0.12</x:Double>
+                                        <x:Double>0.15</x:Double>
+                                        <x:Double>0.18</x:Double>
+                                        <x:Double>0.21</x:Double>
+                                        <x:Double>0.24</x:Double>
+                                        <x:Double>0.27</x:Double>
+                                        <x:Double>0.30</x:Double>
+                                        <x:Double>0.33</x:Double>
+                                        <x:Double>0.36</x:Double>
+                                        <x:Double>0.39</x:Double>
+                                        <x:Double>0.42</x:Double>
+                                        <x:Double>0.45</x:Double>
+                                        <x:Double>0.48</x:Double>
+                                        <x:Double>0.51</x:Double>
+                                        <x:Double>0.55</x:Double>
+                                        <x:Double>0.60</x:Double>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <StackLayout Padding="5">
+                            <Label FontSize="Small">Tap the value below to select the closest nitrogen cost ($/lb)</Label>
+                            <Picker x:Name="sfNitrogenCostPicker"
                             SelectedIndexChanged="SunflowerNitrogenCostPicker_SelectedIndexChanged"
                     Title="select the closest nitrogen cost ($/lb)"
                     Style="{StaticResource PickerStyle}"/>
-                    </StackLayout>
-                </Frame>
-                <Frame Style="{StaticResource FrameStyle}">
-                    <StackLayout Padding="5">
-                        <Label FontSize="Small">Tap the item below to select the previous crops planted</Label>
-                        <Picker x:Name="sfPreviousCropPicker"
+                        </StackLayout>
+                    </Frame>
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <StackLayout Padding="5">
+                            <Label FontSize="Small">Tap the item below to select the previous crops planted</Label>
+                            <Picker x:Name="sfPreviousCropPicker"
                             SelectedIndexChanged="SunflowerPreviousCropPicker_SelectedIndexChanged"
                     Title="select the previous crops planted"
                     Style="{StaticResource PickerStyle}"/>
-                    </StackLayout>
-                </Frame>
-                <Frame Style="{StaticResource FrameStyle}">
-                    <StackLayout Padding="5">
-                        <Label FontSize="Small">Enter the nitrate-N result of the 2-ft depth soil test (lbs/acre): a nonnegative value</Label>
-                        <Entry x:Name="soilTestNEntry" 
+                        </StackLayout>
+                    </Frame>
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <StackLayout Padding="5">
+                            <Label FontSize="Small">Enter the nitrate-N result of the 2-ft depth soil test (lbs/acre): a nonnegative value</Label>
+                            <Entry x:Name="soilTestNEntry" 
                            Placeholder="Enter a nonnegative value here" 
                            Style="{StaticResource EntryStyle}"
                            TextChanged="SoilTestNEntry_TextChanged"/>
-                    </StackLayout>
-                </Frame>
-                <Frame Style="{StaticResource FrameStyle}">
-                    <StackLayout Padding="5">
-                        <Label FontSize="Small">Enter the percent organic matter in soil (%): a value between 0 and 8</Label>
-                        <Entry x:Name="soilOrganicMatterEntry" 
+                        </StackLayout>
+                    </Frame>
+                    <Frame Style="{StaticResource FrameStyle}">
+                        <StackLayout Padding="5">
+                            <Label FontSize="Small">Enter the percent organic matter in soil (%): a value between 0 and 8</Label>
+                            <Entry x:Name="soilOrganicMatterEntry" 
                            Placeholder="Enter a value between 0 and 8" 
                            Style="{StaticResource EntryStyle}"
                            TextChanged="SoilOrganicMatterEntry_TextChanged"/>
-                    </StackLayout>
-                </Frame>
-                <Label HorizontalTextAlignment="Center">- - - - - THE END - - - - -</Label>
-                <Label></Label>
-            </StackLayout>
-        </ScrollView>
-        
-        <StackLayout x:Name="ResultStack" Style="{StaticResource ResultStackStyle}">
-            <Label Style="{StaticResource ResultTitleLabelStyle}"/>
-            <Label x:Name="ResultLabel" Style="{StaticResource ResultLabelStyle}"/>
-        </StackLayout>
-        <Button x:Name="CalculateBtn" Style="{StaticResource CalculateBtnStyle}" Clicked="CalculateBtn_Clicked"/>
-        <Label HeightRequest="0"></Label>
-    </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Label HorizontalTextAlignment="Center">- - - - - THE END - - - - -</Label>
+                    <Label></Label>
+                </StackLayout>
+            </ScrollView>
 
+            <StackLayout x:Name="ResultStack" Style="{StaticResource ResultStackStyle}">
+                <Label Style="{StaticResource ResultTitleLabelStyle}"/>
+                <Label x:Name="ResultLabel" Style="{StaticResource ResultLabelStyle}"/>
+            </StackLayout>
+            <Button x:Name="CalculateBtn" Style="{StaticResource CalculateBtnStyle}" Clicked="CalculateBtn_Clicked"/>
+            <Label HeightRequest="0"></Label>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

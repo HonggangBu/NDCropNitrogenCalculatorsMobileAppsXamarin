@@ -48,5 +48,11 @@ namespace NitrogenXamarin2.Views
         {
             await Browser.OpenAsync("https://www.ndsu.edu/agriculture/ag-hub/publications/fertilizing-hard-red-spring-wheat-and-durum", BrowserLaunchMode.SystemPreferred);
         }
+
+        private async void FranzenImageTapped(object sender, EventArgs e)
+        {
+            await Browser.OpenAsync("https://www.ndsu.edu/snrs/people/faculty/dave_franzen/", BrowserLaunchMode.SystemPreferred);
+
+        }
     }
 }

@@ -30,7 +30,6 @@
     <EmbeddedResource Include="Images\Franzen.jpeg" />
     <EmbeddedResource Include="Images\ND4.jpg" />
     <EmbeddedResource Include="Images\ND_ThreeRegion.png" />
-    <EmbeddedResource Include="Images\sunflowerCornWheat.png" />
   </ItemGroup>
 
   <ItemGroup>

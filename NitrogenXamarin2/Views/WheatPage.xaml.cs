@@ -173,51 +173,44 @@ namespace NitrogenXamarin2.Views
         }
 
 
-        private void OnAnythingChanged()
-        {
-            CalculateBtn.IsVisible = true;
-            ResultStack.IsVisible = false;
-            ResultLabel.Text = "";
-        }
-
         private void RegionRBtn_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
         }
 
         private void TillageRBtn_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
         }
 
         private void ProductivityRBtn_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
         }
 
         private void WheatPricePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
         }
 
         private void WheatNitrogenCostPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
         }
 
         private void WheatPreviousCropPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
         }
 
         private void SoilTestNEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
         }
 
         private void SoilOrganicMatterEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
-            OnAnythingChanged();
+            CommonFunctions.OnAnythingChanged(CalculateBtn, ResultStack, ResultLabel);
         }
     }
 }

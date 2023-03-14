@@ -629,6 +629,7 @@ C:\visualstudioProjects\xamarinAndroid\NitrogenXamarin2\NitrogenXamarin2.Android
 C:\visualstudioProjects\xamarinAndroid\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\120\android\bin\soil.ndsu.aab
 C:\visualstudioProjects\xamarinAndroid\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\120\android\bin\soil.ndsu.apks
 C:\visualstudioProjects\xamarinAndroid\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\120\res\drawable\icon_barley.png
+C:\visualstudioProjects\xamarinAndroid\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\120\res\drawable\splash_screen.png
 C:\visualstudioProjects\xamarinAndroid\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\120\res\values\styles.xml
 C:\visualstudioProjects\xamarinAndroid\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\120\res\values\colors.xml
 C:\visualstudioProjects\xamarinAndroid\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\120\res\mipmap-anydpi-v26\icon.xml
@@ -648,7 +649,6 @@ C:\visualstudioProjects\xamarinAndroid\NitrogenXamarin2\NitrogenXamarin2.Android
 C:\visualstudioProjects\xamarinAndroid\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\120\res\drawable\icon_corn.png
 C:\visualstudioProjects\xamarinAndroid\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\120\res\drawable\icon_sunflower.png
 C:\visualstudioProjects\xamarinAndroid\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\120\res\drawable\icon_wheat.png
-C:\visualstudioProjects\xamarinAndroid\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\120\res\drawable\splash_screen.png
 C:\visualstudioProjects\xamarinAndroid\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\120\res\drawable\splash_screen.xml
 C:\visualstudioProjects\xamarinAndroid\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\120\uploadflags.txt
 C:\visualstudioProjects\xamarinAndroid\NitrogenXamarin2\NitrogenXamarin2.Android\obj\Debug\120\resolvedassemblies.hash
