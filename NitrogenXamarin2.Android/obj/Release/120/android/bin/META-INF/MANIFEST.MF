@@ -12,7 +12,7 @@ Name: mono/android/app/ActionBar_OnNavigationListenerImplementor.class
 SHA-256-Digest: iJqfBiLZIb2LQ2YoRtl2yTy64Ch0yNQAkHFJAiCmShc=
 
 Name: mono/android/TypeManager.class
-SHA-256-Digest: pQGdYa0KGaMxCN+XJBE/dsNFOiFDdt3EJ0BKfDBF/9E=
+SHA-256-Digest: A+dimcFB1QpPk8kino8ci1O121nF2NIHVhHhxbNbXwM=
 
 Name: mono/android/media/MediaCodec_OnFrameRenderedListenerImplementor
  .class
@@ -33,9 +33,6 @@ SHA-256-Digest: XrkgaW0AQn8M1TJq6UkZFL4Yo49ol+5b9VV15Zp4d7Y=
 Name: mono/android/widget/TimePicker_OnTimeChangedListenerImplementor.
  class
 SHA-256-Digest: wg/Gz/4Yyiu1RkfUpn2dXby0NFo5ceCrpzRUYpaUyps=
-
-Name: mono/android/app/IntentService.class
-SHA-256-Digest: gy5QqeIaPxw9NQ287a7UPXS3KBLUZQS6vrh2N9f8RLE=
 
 Name: mono/android/app/AppOpsManager_OnOpActiveChangedListenerImplemen
  tor.class
@@ -197,9 +194,6 @@ Name: mono/android/net/wifi/p2p/WifiP2pManager_DiscoveryStateListenerI
  mplementor.class
 SHA-256-Digest: en//2W8IkjLZkA3xAerVS+LhmAeSULZSRR9Jt+NWA+Q=
 
-Name: com/xamarin/java_interop/internal/JavaProxyObject.class
-SHA-256-Digest: G/88nJ3Xt2+usKEd/0YPoyo0HCqtt8q1MQ0NQVclCS8=
-
 Name: mono/android/drm/DrmManagerClient_OnEventListenerImplementor.cla
  ss
 SHA-256-Digest: rPl70hGt/C5aDU8bB/gvmHTd4liRX3Xud++RVsndt1k=
@@ -237,9 +231,6 @@ SHA-256-Digest: OYTsMOelKP5N0OLmjV+/ocUlppMbcfZLNtrA8zDSzdg=
 Name: mono/android/telephony/TelephonyCallback_CallStateListenerImplem
  entor.class
 SHA-256-Digest: ZVsd+daXw/Ke7R5seypkdRpzemba+u7O5eiu4Jm+4l0=
-
-Name: com/xamarin/java_interop/GCUserPeerable.class
-SHA-256-Digest: 9c7U/YNvUwsWILqBvlzyGvwRuXLoV84iaBERdq+slIk=
 
 Name: mono/android/widget/ShareActionProvider_OnShareTargetSelectedLis
  tenerImplementor.class
@@ -689,9 +680,6 @@ SHA-256-Digest: pRvyqYw+Q7t+Eajq5s53eea7n3rQOnrOYiJt4cAh4Bo=
 Name: mono/android/speech/RecognitionListenerImplementor.class
 SHA-256-Digest: QB+OXMnWdWMmSpsDcwyZnnaXhu6YgKrI+UNTT8Ro+iQ=
 
-Name: com/xamarin/java_interop/ManagedPeer.class
-SHA-256-Digest: 02fi7sYNCcwTQCn9D1ttvD1284zyDxravOM52T0BoYk=
-
 Name: mono/android/app/AlarmManager_OnAlarmListenerImplementor.class
 SHA-256-Digest: uOPBjAe3PP/TzfPYlgO8n+clh7JrTfYrVwCI5W+aWSY=
 
@@ -807,9 +795,6 @@ SHA-256-Digest: PwsvRSXmNQwcvjKjwrV7AD1yKK73yo2A8yTtiSmXqww=
 Name: mono/android/view/accessibility/AccessibilityManager_Accessibili
  tyStateChangeListenerImplementor.class
 SHA-256-Digest: /BPFQPowPAXyrudrg0GVqZstcY/4EotS/bG7FpohYJc=
-
-Name: com/xamarin/java_interop/internal/JavaProxyThrowable.class
-SHA-256-Digest: sYmeH4QKetJijJGou8+PVx1qrjgjWRLz+SmQJac3elE=
 
 Name: mono/android/net/sip/SipRegistrationListenerImplementor.class
 SHA-256-Digest: WRh9HNOatuZZhxyFUBb3v15BSxZ1v2FZ5g0SD8jCI0Y=

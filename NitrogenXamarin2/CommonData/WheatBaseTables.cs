@@ -9,7 +9,7 @@
         // Langdon area long-term no-till recommendation equals corresponding Langdon conventional till recommendation minus 30 lbs/acre
         
         private const int minNotillDiff = 20;
-        private const int eastWestLongNotillDiff = -50; // Easter medium long-term no-till is an exception
+        private const int eastWestLongNotillDiff = -50;
         private const int langdonLongNotillDiff = -30;
 
         private const int nRow = 13;

@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "MonoAndroid,Version=v12.0": {
+    "MonoAndroid,Version=v13.0": {
       "ExpandableView/1.0.10": {
         "type": "package",
         "dependencies": {
@@ -2363,7 +2363,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "MonoAndroid,Version=v12.0": [
+    "MonoAndroid,Version=v13.0": [
       "ExpandableView >= 1.0.10",
       "NitrogenXamarin2 >= 1.0.0",
       "Xamarin.Essentials >= 1.6.1",
@@ -2393,14 +2393,14 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "monoandroid12.0"
+        "monoandroid13.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "monoandroid12.0": {
+        "monoandroid13.0": {
           "projectReferences": {
             "C:\\visualstudioProjects\\xamarinAndroid\\NitrogenXamarin2\\NitrogenXamarin2\\NitrogenXamarin2.csproj": {
               "projectPath": "C:\\visualstudioProjects\\xamarinAndroid\\NitrogenXamarin2\\NitrogenXamarin2\\NitrogenXamarin2.csproj"
@@ -2410,27 +2410,15 @@
       }
     },
     "frameworks": {
-      "monoandroid12.0": {
+      "monoandroid13.0": {
         "dependencies": {
           "ExpandableView": {
             "target": "Package",
             "version": "[1.0.10, )"
           },
-          "ExpandableView": {
-            "target": "Package",
-            "version": "[1.0.10, )"
-          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.6.1, )"
-          },
-          "Xamarin.Essentials": {
-            "target": "Package",
-            "version": "[1.6.1, )"
-          },
-          "Xamarin.Forms": {
-            "target": "Package",
-            "version": "[5.0.0.2012, )"
           },
           "Xamarin.Forms": {
             "target": "Package",

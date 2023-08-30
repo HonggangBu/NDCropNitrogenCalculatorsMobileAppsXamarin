@@ -52,7 +52,7 @@
                             <DataTemplate>
                                 <StackLayout>
                                     <Label Style="{StaticResource ContentLabelStyle}">
-                                        This application provides three NDSU crop nitrogen recommendation calculators for use in North Dakota sunflower, corn, and spring wheat/durum, respectively.
+                                        This application provides four NDSU crop nitrogen recommendation calculators for use in North Dakota sunflower, corn, spring wheat/durum, and 2-row malting barley, respectively.
                                     </Label>
                                     <Label></Label>
                                     <Label Style="{StaticResource ContentLabelStyle}">
@@ -60,7 +60,7 @@
                                     </Label>
                                     <Label></Label>
                                     <Label Style="{StaticResource ContentLabelStyle}">
-                                        The research N-rate data-base underlying these calculators is from the many-years of field research conducted by Dr. David Franzen, Soil Extension Specialist at North Dakota State University, and others.
+                                        The research N-rate database underlying these calculators is from the many-years of field research conducted by Dr. David Franzen, Soil Extension Specialist at North Dakota State University, and others.
                                     </Label>
                                     <Label></Label>
                                     <Label Style="{StaticResource ContentLabelStyle}">
@@ -138,7 +138,7 @@ High clay soils are subject to N loss due to denitrification in wet years. If sp
 
 Nitrogen recommendation in this app is based on an economic production function that takes into account the yield response of barley to added N, less the cost of the N.
 
-The final Nitrogen recommendation is the average optimal rate. Growers may choose to apply up to 30 lb N/acre more or less than the calculated N rates due to protein traits of a variety, special soil conditions such as susceptibility to spring denitrification, application techniques that may not be most efficient or historical experiences from the field or part of a field that may influence N uptake and efficiency.
+The final Nitrogen recommendation is the average optimal rate. Growers may choose to apply up to 15 lb N/acre more or less than the calculated N rates due to protein traits of a variety, special soil conditions such as susceptibility to spring denitrification, application techniques that may not be most efficient or historical experiences from the field or part of a field that may influence N uptake and efficiency.
                                             </Label>
                                         </expandable:ExpandableView.SecondaryView>
                                     </expandable:ExpandableView>
@@ -175,12 +175,6 @@ The final Nitrogen recommendation is the average optimal rate. Growers may choos
                         <expandable:ExpandableView.SecondaryViewTemplate>
                             <DataTemplate>
                                 <StackLayout BackgroundColor="LightGray">
-                                    <Image Source="{local:ImageResource NitrogenXamarin2.Images.Franzen.jpeg}" WidthRequest="150">
-                                        <Image.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="FranzenImageTapped">
-                                            </TapGestureRecognizer>
-                                        </Image.GestureRecognizers>
-                                    </Image>
                                     <Label FontSize="Medium" FontAttributes="Italic" TextDecorations="Underline" HorizontalTextAlignment="Center">
                                         <Label.FormattedText>
                                             <FormattedString>

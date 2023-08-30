@@ -23,14 +23,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "monoandroid12.0"
+          "monoandroid13.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "monoandroid12.0": {
+          "monoandroid13.0": {
             "projectReferences": {
               "C:\\visualstudioProjects\\xamarinAndroid\\NitrogenXamarin2\\NitrogenXamarin2\\NitrogenXamarin2.csproj": {
                 "projectPath": "C:\\visualstudioProjects\\xamarinAndroid\\NitrogenXamarin2\\NitrogenXamarin2\\NitrogenXamarin2.csproj"
@@ -40,7 +40,7 @@
         }
       },
       "frameworks": {
-        "monoandroid12.0": {
+        "monoandroid13.0": {
           "dependencies": {
             "ExpandableView": {
               "target": "Package",
@@ -129,7 +129,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

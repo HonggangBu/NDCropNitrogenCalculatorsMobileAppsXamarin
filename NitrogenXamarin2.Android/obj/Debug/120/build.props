@@ -8,8 +8,8 @@ androiddextool=d8
 androidlinktool=
 androidlinkresources=
 androidpackageformat=apk
-embedassembliesintoapk=false
-androidlinkmode=none
+embedassembliesintoapk=true
+androidlinkmode=sdkonly
 androidlinkskip=
 androidsdkbuildtoolsversion=32.0.0
 androidsdkpath=c:\program files (x86)\android\android-sdk\
@@ -27,9 +27,7 @@ androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
 _nugetassetstimestamp=638143238579316544
 typemapkind=strings-asm
-androidsupportedabis=arm64-v8a
-armeabi-v7a
-x86
-x86_64
+androidsupportedabis=armeabi-v7a
+arm64-v8a
 androidmanifestplaceholders=
 projectfullpath=c:\visualstudioprojects\xamarinandroid\nitrogenxamarin2\nitrogenxamarin2.android\nitrogenxamarin2.android.csproj
